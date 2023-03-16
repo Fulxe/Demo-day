@@ -1,0 +1,123 @@
+.navbar-main {
+  width: 100vw;
+  height: 20vh;
+  position: relative;
+  z-index: 10;
+}
+.Navbar {
+  width: 100vw;
+  height: 7vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.nav-logo {
+  position: absolute;
+  left: 10%;
+  display: flex;
+  cursor: pointer;
+}
+.nav-logo div {
+  width: 18px;
+  height: 18px;
+  background-color: #32cd32;
+  border-radius: 50%;
+  position: absolute;
+  left: 105%;
+  bottom: 5%;
+  position: 0;
+}
+.nav-logo h3 {
+  font-size: 44px;
+}
+.nav-log {
+  position: absolute;
+  /* width: 13%;
+  right: 15%; */
+  right: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-log button {
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: #32cd32;
+  border: 2px solid #32cd32;
+  color: white;
+  cursor: pointer;
+  margin: 15px;
+}
+.nav-log button:hover {
+  color: #32cd32;
+  padding: 13px 23px;
+  background-color: white;
+  transition: 1s;
+}
+.nav-angilal {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-angi {
+  position: absolute;
+  margin: 10px 0px;
+  left: 10%;
+  color: #32cd32;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  width: 6em;
+  height: 5em;
+  background-color: #ff4355;
+  box-shadow: inset 0.2em -0.2em #cc1022;
+  border-radius: 2em 2em 3em 3em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  transform: rotate(10deg);
+}
+.nav-angi:hover {
+  transition: 1300ms;
+  color: white;
+  transform: rotate(370deg);
+}
+.nav-angi p {
+  position: absolute;
+  left: 5%;
+  bottom: 37%;
+  padding: 5px 9px;
+}
+.Categories {
+  width: 50vw;
+  height: 100vh;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  background-color: white;
+  border-radius: 0px 55px 55px 0vh;
+  transform: scale(0.9);
+  border: 0.1em solid rgb(161, 161, 161);
+  box-shadow: 5px 5px 10px 0px grey;
+}
+.Categories button {
+  position: absolute;
+  right: 3%;
+  top: 3%;  
+  padding: 7px 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #32cd32;
+  color: white;
+  border: 2px solid #32cd32;
+}
+.Categories button:hover {
+  color: #32cd32;
+  padding: 9px 12px;
+  background-color: white;
+  border: 2px solid #32cd32;
+  transition: 500ms;
+}
