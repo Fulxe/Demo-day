@@ -26,12 +26,12 @@ function Navbar() {
           </button>
         </div>
       </div>
-      <div className="nav-angilal">
+      {/* <div className="nav-angilal">
         <div className="nav-angi" onClick={() => setCategorie(!categorie)}>
           <p>АНГИЛАЛ</p>
 >>>>>>> 9274b31 (g)
         </div>
-      </div>
+      </div> */}
 
       <Outlet />
       {categorie && (
