@@ -14,7 +14,7 @@ root.render(
         <Route path="/" element={<Navbar />}>
           <Route path="" element={<App />} />
         </Route>
-        <Route path="/about-us" element={<About/>} />s
+        <Route path="/about-us" element={<About/>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
