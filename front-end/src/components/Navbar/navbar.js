@@ -14,16 +14,10 @@ function Navbar() {
         <div className="nav-log">
           <button>Sign-up</button>
           <button>Sign-in</button>
-          <button>
-            About us
-          </button>
+          <button>About us</button>
         </div>
       </div>
-      <div className="nav-angilal">
-        <div className="nav-angi" onClick={() => setCategorie(!categorie)}>
-          <p>АНГИЛАЛ</p>
-        </div>
-      </div>
+
       <Outlet />
       {categorie && (
         <div className="Categories">
