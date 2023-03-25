@@ -1,0 +1,25 @@
+.food {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid red;
+}
+.food-line1 {
+  width: 25%;
+  height: 100%;
+  margin-top: 3%;
+  border: 1px solid red;
+}
+.food-line2 {
+  width: 30%;
+  height: 100%;
+  margin-top: 3%;
+  border: 1px solid red;
+}
+.food-line3 {
+  width: 25%;
+  height: 100%;
+  margin-top: 3%;
+  border: 1px solid red;
+}

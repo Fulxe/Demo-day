@@ -9,6 +9,7 @@ import fruit3 from "./image/fruit3.jpg";
 import nxtfood1 from "./image/nxt-food.jpg";
 import nxtfruit1 from "./image/nxt-fruit.jpg";
 import Footer from "../Footer/footer";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -45,18 +46,18 @@ function Home() {
             <img src={nxtfood1} alt="" />
             <img src={nxtfood1} alt="" />
             <img src={nxtfood1} alt="" />
-            <h1>Food</h1>
+            <h1><Link to="/food">Food</Link></h1>
           </div>
           <div className="nxt-huns">
-            <img src={nxtfruit1} alt=""/>
-            <img src={nxtfruit1} alt=""/>
-            <img src={nxtfruit1} alt=""/>
-            <img src={nxtfruit1} alt=""/>
-            <h1>Fruit</h1>
+            <img src={nxtfruit1} alt="" />
+            <img src={nxtfruit1} alt="" />
+            <img src={nxtfruit1} alt="" />
+            <img src={nxtfruit1} alt="" />
+            <h1><Link to="/fruit">Fruit</Link></h1>
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

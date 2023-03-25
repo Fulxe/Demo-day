@@ -37,6 +37,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 25%;
+  height: 100%;
+  /* border: 1px solid red; */
 }
 .nav-log button {
   padding: 10px 20px;
@@ -82,4 +85,7 @@
   background-color: white;
   border: 2px solid #32cd32;
   transition: 500ms;
+}
+.anv-ani {
+  position: absolute;
 }

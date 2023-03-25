@@ -1,9 +1,7 @@
-import { Outlet } from "react-router-dom";
-import { useState } from "react";
+import { Outlet, Link } from "react-router-dom";
 import "./navbar.css";
 
 function Navbar() {
-  const [categorie, setCategorie] = useState(false);
   return (
     <div className="navbar-main">
       <div className="Navbar">
@@ -17,14 +15,8 @@ function Navbar() {
           <button>About us</button>
         </div>
       </div>
-
+      <div className="nav-ani"></div>
       <Outlet />
-      {categorie && (
-        <div className="Categories">
-          <button onClick={() => setCategorie(!categorie)}>Cancel</button>
-          <div className="cat-heading"></div>
-        </div>
-      )}
     </div>
   );
 }
