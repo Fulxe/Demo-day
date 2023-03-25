@@ -1,11 +1,10 @@
 import { Outlet } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./navbar.css";
-import { useNavigate } from "react-router-dom";
 
 function Navbar() {
-  const [categorie, setCategorie] = useState(false);
+  // const [categorie, setCategorie] = useState(false);
   const navigate = useNavigate();
   return (
     <div className="navbar-main">
