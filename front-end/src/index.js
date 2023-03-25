@@ -10,12 +10,18 @@ import SignUp from "./components/login/sign-up";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Navbar />}>
+<<<<<<< HEAD
           <Route element={<App />} index />
           <Route path="login" element={<Login />} />
           <Route path="sign-up" element={<SignUp />} />
+=======
+          <Route path="" element={<App />} />
+          <Route path="/about" element={<AboutUs/>}/>
+>>>>>>> 9274b31 (g)
         </Route>
       </Routes>
     </BrowserRouter>
