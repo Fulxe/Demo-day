@@ -1,20 +1,92 @@
 .signup {
     display: flex;
-    height: 85vh;
+    height: 93vh;
     justify-content: center;
     align-items: center;
-}
-.signup-main {
+    font-size: 1vw;
+   }
+   .signup-main {
     width: 25vw;
-    height: 65vh;
+    height: 45vh;  
     border: 0.13vw solid #32cd32;
     border-radius: 3vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3.5vh;
+    gap:3.5vh;
+   }
+   .lsignup-main h1 {
+       font-size: 2vw;
+       margin-top: 10%;
+   }
+   
+   .signup-input {
+     position: relative;
+     width: 300px;
+     margin-top: 35px;
+   }
+   .signup-input input {
+     position: relative;
+     width: 100%;
+     padding: 20px 10px 10px;
+     background: transparent;
+     outline: none;
+     box-shadow: none;
+     border: none;
+     color: #23242a;
+     font-size: 1em;
+     letter-spacing: 0.05em;
+     transition: 0.5s;
+     z-index: 10;
+   }
+   .signup-input span {
+     position: absolute;
+     left: 0;
+     padding: 20px 0px 10px;
+     pointer-events: none;
+     font-size: 1em;
+     color: #8f8f8f;
+     letter-spacing: 0.05em;
+     transition: 0.5s;
+   }
+   .signup-input input:valid ~ span,
+   .signup-input input:focus ~ span {
+     color: #32cd32;
+     transform: translateX(0px) translateY(-34px);
+     font-size: 0.75em;
+   }
+   .signup-input i {
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     width: 100%;
+     height: 2px;
+     background: #32cd32;
+     border-radius: 4px;
+     overflow: hidden;
+     transition: 0.5s;
+     pointer-events: none;
+     z-index: 9;
+   }
+   .signup-input input:valid ~ i,
+   .signup-input input:focus ~ i {
+     height: 44px;
+   }
+   
+   
+   .signup-main button {
+    width: 90%;
+    height: 30%;
+    margin-top: 3vh;
+    font-size: 1vw;
+    background-color: #32cd32;
+    border: none;
+    border-radius: 3vw;
+    cursor: pointer;
 }
-.signup-main h1 {
-    font-size: 2vw;
-    margin-top: 5%;
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

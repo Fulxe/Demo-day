@@ -1,4 +1,4 @@
-.login {
+/* .login {
     display: flex;
     height: 85vh;
     justify-content: center;
@@ -47,4 +47,110 @@
     font-weight: 500;
     font-size: 1vw;
     cursor: pointer;
+} */
+
+.login {
+ display: flex;
+ height: 93vh;
+ justify-content: center;
+ align-items: center;
+ font-size: 1vw;
+}
+.login-main {
+ width: 25vw;
+ height: 45vh;  
+ border: 0.13vw solid #32cd32;
+ border-radius: 3vw;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap:3.5vh;
+}
+.login-main h1 {
+    font-size: 2vw;
+    margin-top: 10%;
+}
+
+.login-input {
+  position: relative;
+  width: 300px;
+  margin-top: 35px;
+}
+.login-input input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  color: #23242a;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  z-index: 10;
+}
+.login-input span {
+  position: absolute;
+  left: 0;
+  padding: 20px 0px 10px;
+  pointer-events: none;
+  font-size: 1em;
+  color: #8f8f8f;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+.login-input input:valid ~ span,
+.login-input input:focus ~ span {
+  color: #32cd32;
+  transform: translateX(0px) translateY(-34px);
+  font-size: 0.75em;
+}
+.login-input i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #32cd32;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+.login-input input:valid ~ i,
+.login-input input:focus ~ i {
+  height: 44px;
+}
+
+
+.login-sign {
+    display: flex;
+    gap: 1vw;
+    font-size: 1vw;
+    margin-top: 5%;
+}
+.login-sign-button {
+    color: #09d109;
+    font-weight: 500;
+    font-size: 1vw;
+    cursor: pointer;
+} 
+
+.login-main button {
+    width: 90%;
+    height: 15%;
+    margin-top: 3vh;
+    font-size: 1vw;
+    background-color: #32cd32;
+    border: none;
+    border-radius: 3vw;
+    cursor: pointer;
+}
+.login-form {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
