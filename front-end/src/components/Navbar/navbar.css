@@ -37,9 +37,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 25%;
-  height: 100%;
-  /* border: 1px solid red; */
+  width: 13%;
 }
 .nav-log button {
   padding: 10px 20px;

@@ -9,9 +9,11 @@ import fruit3 from "./image/fruit3.jpg";
 import nxtfood1 from "./image/nxt-food.jpg";
 import nxtfruit1 from "./image/nxt-fruit.jpg";
 import Footer from "../Footer/footer";
-import { Link } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 
 function Home() {
+  const navigate = useNavigate();
+
   return (
     <div className="Home">
       <div className="home">
@@ -46,14 +48,14 @@ function Home() {
             <img src={nxtfood1} alt="" />
             <img src={nxtfood1} alt="" />
             <img src={nxtfood1} alt="" />
-            <h1><Link to="/food">Food</Link></h1>
+            <h1 onClick={() => navigate("/food")}>Food</h1>
           </div>
           <div className="nxt-huns">
             <img src={nxtfruit1} alt="" />
             <img src={nxtfruit1} alt="" />
             <img src={nxtfruit1} alt="" />
             <img src={nxtfruit1} alt="" />
-            <h1><Link to="/fruit">Fruit</Link></h1>
+            <h1 onClick={() => navigate("/fruit")}>Fruit</h1>
           </div>
         </div>
       </div>

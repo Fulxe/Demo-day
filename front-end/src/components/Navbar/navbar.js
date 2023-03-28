@@ -10,14 +10,11 @@ function Navbar() {
     <div className="navbar-main">
       <div className="Navbar">
         <div className="nav-logo">
-          <h3>Logo</h3>
+          <h3 onClick={() => navigate("/")}>Pineapple</h3>
           <div></div>
         </div>
         <div className="nav-log">
-          <button>Sign-up</button>
           <button onClick={() => navigate("/login")}>Sign-in</button>
-          <button>About us</button>
-          <button>Sign-in</button>
           <button onClick={() => navigate("/about")}>About us</button>
         </div>
       </div>

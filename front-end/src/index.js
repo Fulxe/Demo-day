@@ -4,11 +4,11 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar/navbar";
-import Fruit from "./components/Fruit/fruit" ; 
+import Fruit from "./components/Fruit/fruit";
 import Food from "./components/Food/food";
 import Login from "./components/login/login";
 import SignUp from "./components/login/sign-up";
-import About from "./components/About/about";
+import About from "./components/about/about";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -19,11 +19,10 @@ root.render(
           <Route path="" element={<App />} />
           <Route path="/fruit" element={<Fruit />} />
           <Route path="/food" element={<Food />} />
-          <Route path="login" element={<Login />} />
-          <Route path="sign-up" element={<SignUp />} />
           <Route path="/about" element={<About />} />
         </Route>
-        <Route path="/login" />
+        <Route path="login" element={<Login />} />
+        <Route path="sign-up" element={<SignUp />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
