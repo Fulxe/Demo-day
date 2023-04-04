@@ -1,18 +1,24 @@
-.food {
+.Food {
   width: 100vw;
   height: 100vh;
+}
+.food {
+  width: 100vw;
+  height: fit-content;
   display: flex;
   justify-content: space-around;
   border: 1px solid red;
 }
 .food-line1 {
-  width: 25%;
+  width: 13%;
   height: 100%;
   margin-top: 3%;
   border: 1px solid red;
   background-color: white;
   display: flex;
   flex-direction: column;
+  font-size: 12px;
+  font-weight: 400;
 }
 .food-line2 {
   width: 30%;

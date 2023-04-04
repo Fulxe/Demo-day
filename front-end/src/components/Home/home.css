@@ -7,14 +7,20 @@
   height: 90vh;
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  border: 1px solid red;
 }
 .title {
-  position: absolute;
+  /* position: absolute; */
   right: 30%;
-  /* top: 45%; */
+  border: 1px solid red;
+}
+.title h1 {
+  font-size: 68px;
+  font-weight: 700;
 }
 .image {
-  position: absolute;
+  /* position: absolute; */
   left: 17%;
   /* top: 25%; */
   width: 23vw;

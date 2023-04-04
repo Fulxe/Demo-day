@@ -5,7 +5,6 @@
   align-items: center;
   justify-content: center;
   color: white;
-  border: 1px solid red;
 }
 .footer-center {
   height: fit-content;
@@ -26,8 +25,8 @@
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  position: relative;
+  position: absolute ;
   left: 0;
-  bottom: 0;
-  z-index:-1;
+  bottom: 1000;
+  z-index: -1;
 }
