@@ -11,7 +11,9 @@
 }
 .food-line1 {
   width: 13%;
+  width: 12%;
   height: 100%;
+  font-size: 1vw;
   margin-top: 3%;
   border: 1px solid red;
   background-color: white;

@@ -28,7 +28,7 @@ function Login() {
           <h1>Log in</h1>
           <div class="login-input">
             <input type="firstName" required="required" />
-            <span>Username</span>
+            <span>Username or E-mail</span>
             <i></i>
           </div>
           <div class="login-input">
@@ -36,7 +36,7 @@ function Login() {
             <span>Password</span>
             <i></i>
           </div>
-          <button>Log in</button>
+          <button className="login-main-button">Log in</button>
           <div className="login-sign">
             <p>Don't have an account?</p>
             <p
