@@ -5,9 +5,9 @@ import { useNavigate } from "react-router";
 function Food() {
   const dataa = FoodData;
   const nav = useNavigate();
-  function FoodAdditional() {
-    return <div>nyhgbfv</div>;
-  }
+  // function FoodAdditional() {
+  //   return <div>nyhgbfv</div>;
+  // }
 
   return (
     <div className="Food">

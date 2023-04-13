@@ -4,7 +4,10 @@ import nxtfood1 from "./image/nxt-food.jpg";
 import nxtfruit1 from "./image/nxt-fruit.jpg";
 import Footer from "../Footer/footer";
 import { useNavigate } from "react-router-dom";
-import food1 from "./food2.png"
+import food1 from "./image/food1.jpg";
+import fruit1 from "./image/fruit.jpg";
+import food2 from "./image/food2.jpg";
+import fruit2 from "./image/fruit2.jpg"
 
 function Home() {
   const navigate = useNavigate();
@@ -12,13 +15,12 @@ function Home() {
   return (
     <div className="Home">
       <div className="home">
-        <div className="image">
-          <div className="back-style">
-            <img alt="" src={food1}/>
-          </div>
-        </div>
-        <div className="title">
-          <h1>Pineapple</h1>
+        <h1>Pineapple</h1>
+        <div className="images">
+          <img alt="" src={food1} />
+          <img alt="" src={fruit1} />
+          <img alt="" src={food2} />
+          <img alt="" src={fruit2}/>
         </div>
       </div>
       <div className="nxt-page">
