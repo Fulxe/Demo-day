@@ -11,8 +11,7 @@
 }
 .home div:nth-child(1) {
   width: 40%;
-  height: fit-content;
-  /* border: 1px solid red; */
+  height: 40%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -32,7 +31,6 @@
   animation: back 20s linear infinite;
   /* margin-left: 105px; */
   background-color: #32cd32;
-  /* border: 1px solid red; */
 }
 .images {
   width: 40%;
@@ -40,6 +38,7 @@
 }
 .images img {
   border-radius: 30px;
+  padding: 8px 8px;
 }
 .images img:nth-child(1) {
   position: absolute;
@@ -63,8 +62,8 @@
   top: 29em;
 }
 .images img:nth-child(4) {
-  width: 330px;
-  height: 260px;
+  width: 18vw;
+  height: 26vh;
   position: absolute;
   right: 27em;
   top: 35em;
