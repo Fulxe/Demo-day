@@ -1,6 +1,7 @@
 import React from "react";
 import "./login.css";
 import { useNavigate } from "react-router";
+import AnimatedPage from "../AnimatedPage";
 
 function Login() {
   const navigate = useNavigate();
@@ -22,6 +23,7 @@ function Login() {
     //   </div>
     //   <div></div>
     // </div>
+    <AnimatedPage>
     <div className="login">
       <div class="login-main">
         <form autocomplete="off" className="login-form">
@@ -49,6 +51,7 @@ function Login() {
         </form>
       </div>
     </div>
+    </AnimatedPage>
   );
 }
 
