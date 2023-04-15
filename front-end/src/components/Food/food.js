@@ -1,40 +1,51 @@
 import "./food.css";
-import FoodData from "./data";
 import Footer from "../Footer/footer";
-import { useNavigate } from "react-router";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import AnimatedPage from "../AnimatedPage";
 function Food() {
-  const dataa = FoodData;
-  const nav = useNavigate();
-  // function FoodAdditional() {
-  //   return <div>nyhgbfv</div>;
-  // }
-
+  const paths = ["Mongolian", "Vegan", "Healthy", "Korean", "Mexican"];
+  const [dropdown, showDropdown] = useState(false);
   return (
-    <AnimatedPage>
-      <div className="Food">
-        <div className="food">
-          {/* {dataa.map((data) => (
-        <div className="food-line1">{data.name}</div>
-      ))} */}
-          <div className="food-line1">
-            {dataa.map((data) => (
-              <h1 className="food-category">{data.name}</h1>
-            ))}
+    <div className="Food" onClick={() => showDropdown(false)}>
+      <div className="food">
+        <div className="food-line1">
+          <div class="navbar">
+            <div class="dropdown">
+              <button
+                class="dropbtn"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  showDropdown(!dropdown);
+                }}
+              >
+                Categories
+              </button>
+              {dropdown && (
+                <div
+                  class="dropdown-content"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                  }}
+                >
+                  {paths.map((path) => (
+                    <div>
+                      <Link className="food-path" to={path.toLowerCase()}>
+                        {path}
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
-          <div className="food-line2"></div>
-          <div className="food-line3"></div>
-          <div className="food-line1">
-            {dataa.map((data) => (
-              <h1 className="food-category" onClick={() => nav(`${data.name}`)}>
-                {data.name}
-              </h1>
-            ))}
-          </div>
-          <Footer />
         </div>
+        <div className="food-line2"></div>
+        <div className="food-line3"></div>
+        <div className="food-line1"></div>
       </div>
-    </AnimatedPage>
+      <Footer className="food-footer" />
+    </div>
   );
 }
 
