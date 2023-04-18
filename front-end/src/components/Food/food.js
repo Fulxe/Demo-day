@@ -3,6 +3,10 @@ import Footer from "../Footer/footer";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import AnimatedPage from "../AnimatedPage";
+import Post from "./post/post";
+
+
+
 function Food() {
   const paths = ["Mongolian", "Vegan", "Healthy", "Korean", "Mexican"];
   const [dropdown, showDropdown] = useState(false);
@@ -41,9 +45,10 @@ function Food() {
               </div>
             </div>
           </div>
-          <div className="food-line2"></div>
+          <div className="food-line2">
+            <Post/>
+          </div>
           <div className="food-line3"></div>
-          <div className="food-line1"></div>
         </div>
         <Footer className="food-footer" />
       </div>

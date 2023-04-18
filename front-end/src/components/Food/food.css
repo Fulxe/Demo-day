@@ -6,7 +6,10 @@
   width: 100vw;
   height: fit-content;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+}
+.food div {
+  border: 1px solid red;
 }
 .food-line1 {
   width: 13%;
@@ -26,7 +29,7 @@
   margin-top: 3%;
 }
 .food-line3 {
-  width: 25%;
+  width: 15%;
   height: 100%;
   margin-top: 3%;
 }
@@ -40,6 +43,7 @@
 .navbar {
   overflow: hidden;
   background-color: #32cd32;
+  border-radius: 25%;
 }
 .dropdown {
   overflow: hidden;
@@ -74,8 +78,6 @@
   text-align: left;
   cursor: pointer;
 }
-
-
 .dropdown:hover .dropdown-content {
   /* display: flex; */
   flex-direction: column;
