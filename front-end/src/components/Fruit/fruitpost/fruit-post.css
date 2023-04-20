@@ -1,0 +1,25 @@
+.fruit-posts{
+    height: 25vh;
+    width: 45vh;
+    background-color: rgb(204, 202, 202);
+    border-radius: 10px;
+    margin-top: 5% ;
+    display: flex;
+}
+.picture{
+    height: 20vh;
+    width: 20vh;
+    background-color: white;
+    margin-top: 6%;
+    margin-left: 5%;
+    border-radius: 10px ;
+}
+.data{
+    margin-left: 3%;
+}
+.data1{
+    margin-top: 60%;
+}
+.data2{
+    margin-top: 120%;
+}
