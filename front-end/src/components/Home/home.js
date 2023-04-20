@@ -30,19 +30,19 @@ function Home() {
         </div>
         <div className="nxt-page">
           <div className="nxt">
-            <div className="nxt-hool">
+            <div onClick={() => navigate("/food")} className="nxt-hool">
               <img src={nxtfood1} alt="" />
               <img src={nxtfood1} alt="" />
               <img src={nxtfood1} alt="" />
               <img src={nxtfood1} alt="" />
-              <h1 onClick={() => navigate("/food")}>Food</h1>
+              <h1>Food</h1>
             </div>
-            <div className="nxt-huns">
+            <div onClick={() => navigate("/fruit")} className="nxt-huns">
               <img src={nxtfruit1} alt="" />
               <img src={nxtfruit1} alt="" />
               <img src={nxtfruit1} alt="" />
               <img src={nxtfruit1} alt="" />
-              <h1 onClick={() => navigate("/fruit")}>Fruit</h1>
+              <h1>Fruit</h1>
             </div>
           </div>
         </div>

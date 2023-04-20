@@ -6,24 +6,31 @@ function Post() {
     <div className="post">
       <div className="profile">
         <div>
-          {/* profile image */}
-          <img alt="" src={test} />
-
           {/* username  */}
-          <h3>BHFVGdhbfhdblufhk dblh</h3>
+          <h3>username</h3>
         </div>
         {/*catogories  */}
         <p>Mongolian</p>
       </div>
-      <div>
+      <div className="post-img">
         {/* Heading */}
-        <p></p>
-
+        <p>Hoolnii Ner</p>
         {/* image */}
-        <img alt="" />
-
-        {/* orts */}
-        <input />
+        <img alt="" src={test} />
+        <div className="post-dis">
+          <div>
+            {/* Arga */}
+            <h3>Arga</h3>
+            <br />
+            <p></p>
+          </div>
+          <div>
+            {/* orts */}
+            <h3>Orts</h3>
+            <br />
+            <p></p>
+          </div>
+        </div>
       </div>
     </div>
   );

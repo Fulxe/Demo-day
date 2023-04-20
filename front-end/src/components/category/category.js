@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "./category.css"
 
 function Cate(props) {
   const paths = ["Mongolian", "Vegan", "Healthy", "Korean", "Mexican"];

@@ -14,27 +14,12 @@ function Food() {
             <Cate />
           </div>
           <div className="food-line2">
-            <div className="food-post-title">
-              <p>username</p>
-              <h4>food name</h4>
-            </div>
-            <div className="food-post-image">
-              <img alt="" />
-            </div>
-            <div className="food-post-comment">
-              <div>Like</div>
-              <div>comment</div>
-            </div>
-            <div className="food-line2">
-              <Post />
-            </div>
-            <div className="food-line2">
-              <Post />
-            </div>
-            <div className="food-line3"></div>
+            <Post />
+            <Post />
           </div>
-          <Footer className="food-footer" />
+          <div className="food-line3"></div>
         </div>
+        <Footer />
       </div>
     </AnimatedPage>
   );
