@@ -9,21 +9,24 @@ import Food from "./components/Food/food";
 import Login from "./components/login/login";
 import SignUp from "./components/login/sign-up";
 import About from "./components/about/about";
+import CatergoryProvider from "./provider/category";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Navbar />}>
-          <Route index element={<App />} />
-          <Route path="/fruit" element={<Fruit />} />
-          <Route path="/food" element={<Food />} />
-          <Route path="/about" element={<About />} />
-        </Route>
-        <Route path="login" element={<Login />} />
-        <Route path="sign-up" element={<SignUp />} />
-      </Routes>
-    </BrowserRouter>
+    <CatergoryProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Navbar />}>
+            <Route index element={<App />} />
+            <Route path="/fruit" element={<Fruit />} />
+            <Route path="/food" element={<Food />} />
+            <Route path="/about" element={<About />} />
+          </Route>
+          <Route path="login" element={<Login />} />
+          <Route path="sign-up" element={<SignUp />} />
+        </Routes>
+      </BrowserRouter>
+    </CatergoryProvider>
   </React.StrictMode>
 );
