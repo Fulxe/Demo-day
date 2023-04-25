@@ -75,6 +75,10 @@ function About() {
             <div class="one26"></div>
           </section>
         </section>
+        <div className="img">
+          <img className="effect1" src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?cs=srgb&dl=pexels-ash-376464.jpg&fm=jpg"/>
+          <img className="effect2" src="https://www.healthfitnessrevolution.com/wp-content/uploads/2016/09/iStock-119483507.jpg"/>
+        </div>
       </div>
     </AnimatedPage>
   );
