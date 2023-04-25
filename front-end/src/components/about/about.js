@@ -44,7 +44,37 @@ function About() {
           </div>
           <div className="zuras"></div>
         </div>
-        <div className="logo"></div>
+        <section class="container">
+          <section class="wrapper">
+            <div class="one"></div>
+            <div class="one1"></div>
+            <div class="one2"></div>
+            <div class="one3"></div>
+            <div class="one4"></div>
+            <div class="one5"></div>
+            <div class="one6"></div>
+            <div class="one7"></div>
+            <div class="one8"></div>
+            <div class="one9"></div>
+            <div class="one10"></div>
+            <div class="one11"></div>
+            <div class="one12"></div>
+            <div class="one13"></div>
+            <div class="one14"></div>
+            <div class="one15"></div>
+            <div class="one16"></div>
+            <div class="one17"></div>
+            <div class="one18"></div>
+            <div class="one19"></div>
+            <div class="one20"></div>
+            <div class="one21"></div>
+            <div class="one22"></div>
+            <div class="one23"></div>
+            <div class="one24"></div>
+            <div class="one25"></div>
+            <div class="one26"></div>
+          </section>
+        </section>
       </div>
     </AnimatedPage>
   );
