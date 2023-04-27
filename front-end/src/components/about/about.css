@@ -11,12 +11,18 @@
     border-width: 0 0 400px 400px;
     border-color: transparent transparent #e1ff00 transparent;
     position: absolute;
-    margin-left: 500px;
 }
 .div1{
     margin-left: 200px;
     width: 0;
     height: 0;
+    background-color: #32cd32;
+    height: 70vh;
+    width: 50vh;
+    position: absolute;
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-top: 4%;
 }
 .Murun{
     padding-top: 150px;
@@ -61,9 +67,8 @@
   margin:0 auto;
   width:50%;
   position: absolute;
-  top: 150%;
-  left: 60%;
-  
+  margin-top: 30vh;
+  margin-left: 120vh;
 }
 .wrapper {
   width:400px;
@@ -254,9 +259,9 @@ section div { /* image is 460px x 460px */
   outline-offset: calc(var(--w)/-2 - 2*var(--s));
   transition: .4s;
   cursor: pointer;
-  margin-top: 27%;
+  margin-top: 29%;
   position: absolute;
-  margin-left: 70%;
+  margin-left: 80%;
 }
 img:hover {
   outline: var(--b) solid var(--c);
@@ -281,9 +286,9 @@ img:hover {
   outline-offset: calc(var(--w)/-2 - 2*var(--s));
   transition: .4s;
   cursor: pointer;
-  margin-top: 1%;
+  margin-top: 6%;
   position: absolute;
-  margin-left: 39%;
+  margin-left: 55%;
 }
 img:hover {
   outline: var(--b) solid var(--c);
