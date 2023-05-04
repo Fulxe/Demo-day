@@ -13,7 +13,7 @@ function Navbar() {
   const location = useLocation();
   function changeWord() {
     if (buttonText === "fruit") {
-      setButtonText("food");
+      setButtonText("vegetable");
     } else setButtonText("fruit");
   }
 
