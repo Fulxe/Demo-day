@@ -1,8 +1,8 @@
 import "./fruit.css";
 import { CategoryContext } from "../../provider/category";
 import { useContext } from "react";
-import Vegetablepost from "./vegetablepost/vetetablepost";
-import Fruitpost from "./vegetablepost/vetetablepost";
+import Vegetablepost from "./fruit-vegetable-post/fr-veg-post";
+import Fruitpost from "./fruit-vegetable-post/fr-veg-post";
 
 function Vegetable() {
   const { buttonText } = useContext(CategoryContext);

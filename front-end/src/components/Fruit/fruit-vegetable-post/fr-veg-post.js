@@ -1,4 +1,4 @@
-import "./vegetablepost.css";
+import "./fr-veg-post.css";
 import { useState } from "react";
 
 function Fruitpost(props) {

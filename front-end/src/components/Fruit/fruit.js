@@ -3,7 +3,7 @@ import "./fruit.css";
 import { CategoryContext } from "../../provider/category";
 import { useContext } from "react";
 import Vegetable from "./vegetable";
-import Fruitpost from "./vegetablepost/vetetablepost";
+import Fruitpost from "./fruit-vegetable-post/fr-veg-post";
 
 function Fruit() {
   const { buttonText } = useContext(CategoryContext);
