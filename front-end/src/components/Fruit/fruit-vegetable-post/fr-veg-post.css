@@ -1,0 +1,25 @@
+
+.fr-c {
+    justify-content: space-evenly;
+    width: 100%;
+}
+.fruit-category {
+    margin-top: 2vh;
+    border: 1px solid red;
+}
+.fruit-post-image {
+    width: 100%;
+    cursor: pointer;
+    background-size: cover;
+}
+.fruit-post-highlighted  {
+    width: 10vw;
+    height: 10vh;
+    background-color: aqua;
+    display: flex;
+}
+.fruit-post-image-modal{ 
+    width: 80%;
+    cursor: pointer;
+    background-size: cover;
+}

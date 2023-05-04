@@ -2,7 +2,7 @@
   width: 100vw;
   height: 100vh;
   display: flex;
-  background: linear-gradient( #e3e3e3 , #32cd32 );
+  background: linear-gradient(#e3e3e3, #32cd32);
 }
 .w {
   font-size: 25px;
@@ -18,6 +18,28 @@
   margin-left: 200px;
   width: 0;
   height: 0;
+}
+.w {
+  font-size: 25px;
+  font-family: cursive;
+}
+.div {
+  border-style: solid;
+  border-width: 0 0 400px 400px;
+  border-color: transparent transparent #e1ff00 transparent;
+  position: absolute;
+}
+.div1 {
+  margin-left: 200px;
+  width: 0;
+  height: 0;
+  background-color: #32cd32;
+  height: 70vh;
+  width: 50vh;
+  position: absolute;
+  border-radius: 10px;
+  margin-left: 10%;
+  margin-top: 4%;
 }
 .Murun {
   padding-top: 150px;
@@ -74,6 +96,8 @@
   position: absolute;
   top: 150%;
   left: 60%;
+  margin-top: 30vh;
+  margin-left: 120vh;
 }
 .wrapper {
   width: 400px;
@@ -246,3 +270,4 @@ section div {
   background-position: 0 -3700%;
   animation-delay: 3.7s;
 }
+
