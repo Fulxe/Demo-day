@@ -16,6 +16,9 @@ function Home() {
   return (
     <AnimatedPage>
       <div className="Home">
+       <div className="dec3">
+        <div className="dec3-dec"></div>
+       </div>
         <div className="home">
           <div>
             <p>Welcome To</p>
@@ -27,6 +30,8 @@ function Home() {
             <img alt="" src={food2} />
             <img alt="" src={fruit2} />
           </div>
+          <div className="dec"></div>
+          <div className="dec2"></div>
         </div>
         <div className="nxt-page">
           <div className="nxt">

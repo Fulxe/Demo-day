@@ -1,11 +1,14 @@
 .post {
-  width: 90%;
+  width: 65vh;
   height: fit-content;
   border-radius: 25px;
   background-color: white;
   margin-top: 25px;
 }
-.profile {
+.post div {
+  /* border: 1px solid red; */
+}
+.pro {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -23,10 +26,10 @@
   padding: 15px;
 }
 .post-img img {
-  padding: 15px;
+  padding: 15px;   
   border-radius: 25px;
 }
-.profile div {
+.pro div {
   width: fit-content;
   height: 100%;
   display: flex;
@@ -34,15 +37,15 @@
   justify-content: space-around;
   border-radius: 10px;
 }
-.profile img {
+.pro img {
   width: 7.5vw;
   border-radius: 100%;
   padding: 14px;
 }
-.profile h3 {
-  margin: 25px;
+.pro h3 {
+  margin: 15px;
 }
-.profile p {
+.pro p {
   font-size: 14px;
   margin: 14px;
   font-weight: 500;
@@ -53,6 +56,4 @@
 }
 .post-dis div {
   width: 35%;
-}
-.post-dis p {
 }

@@ -3,6 +3,7 @@ import "./footer.css";
 function Footer() {
   return (
     <div className="footer">
+      <div className="decoration1"></div>
       <div className="footer-center">
         <div className="footer-logo">
           <h1>Pineapple</h1>

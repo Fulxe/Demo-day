@@ -4,7 +4,7 @@ import test from "./fruit2.jpg";
 function Post() {
   return (
     <div className="post">
-      <div className="profile">
+      <div className="pro">
         <div>
           {/* username  */}
           <h3>username</h3>

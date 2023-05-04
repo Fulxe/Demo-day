@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import "./navbar.css";
-import Fruitpost from "../Fruit/fruit";
 import { CategoryContext } from "../../provider/category";
+// import Logo from "../about/picture/food.svg"
 
 function Navbar() {
   // const [categorie, setCategorie] = useState(false);
@@ -21,16 +21,16 @@ function Navbar() {
     <div className="navbar-main">
       <div className="Navbar">
         <div className="nav-logo">
-          <h3 onClick={() => navigate("/")}>Pineapple</h3>
           <div></div>
+          <h3 onClick={() => navigate("/")}>Pineapple</h3>
         </div>
         <div className="nav-log">
+          <button onClick={() => navigate("/profile")}>Profile</button>
           <button onClick={() => navigate("/login")}>Sign-in</button>
           <button onClick={() => navigate("/about")}>About us</button>
           {location.pathname === "/fruit" && (
             <button onClick={changeWord}>{buttonText}</button>
           )}
-          {/* {buttonText === "fruit" && <Fruitpost />} */}
         </div>
       </div>
       <Outlet />
