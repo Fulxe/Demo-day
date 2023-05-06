@@ -34,20 +34,20 @@
   -webkit-box-reflect: below;
 }
 .dec3 {
-  width: 70vw;
+  width: 100vw;
   height: 100vh;
   z-index: -15;
   background: linear-gradient( #32cd32 , #e3e3e3 );
   position: absolute;
-  top: -65px;
+  top: -100px;
   left: 0;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-end;
 }
 .dec3-dec {
   width: 92%;
-  height: 100%;
+  height: 88%;
   background-color: #e3e3e3;
   border-top-left-radius: 100%;
   border-bottom-left-radius: 100%;

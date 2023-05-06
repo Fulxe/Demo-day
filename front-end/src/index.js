@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
@@ -24,9 +24,9 @@ root.render(
             <Route path="/food" element={<Food />} />
             <Route path="/about" element={<About />} />
             <Route path="profile" element={<Profile />} />
+            <Route path="login" element={<Login />} />
+            <Route path="sign-up" element={<SignUp />} />
           </Route>
-          <Route path="login" element={<Login />} />
-          <Route path="sign-up" element={<SignUp />} />
         </Routes>
       </BrowserRouter>
     </CatergoryProvider>

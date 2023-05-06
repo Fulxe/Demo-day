@@ -3,6 +3,7 @@
   height: 20vh;
   position: relative;
   z-index: 10;
+  /* border: 1px solid red; */
 }
 .Navbar {
   width: 100vw;
@@ -45,6 +46,7 @@
   color: white;
   cursor: pointer;
   margin: 15px;
+  box-shadow: 3px 7px 10px grey;
 }
 .nav-log button:hover {
   color: #32cd32;

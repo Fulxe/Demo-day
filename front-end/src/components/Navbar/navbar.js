@@ -26,7 +26,7 @@ function Navbar() {
         </div>
         <div className="nav-log">
           <button onClick={() => navigate("/profile")}>Profile</button>
-          <button onClick={() => navigate("/login")}>Sign-in</button>
+          <button onClick={() => navigate("/login")}>Login</button>
           <button onClick={() => navigate("/about")}>About us</button>
           {location.pathname === "/fruit" && (
             <button onClick={changeWord}>{buttonText}</button>

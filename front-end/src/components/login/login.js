@@ -6,23 +6,6 @@ import AnimatedPage from "../AnimatedPage";
 function Login() {
   const navigate = useNavigate();
   return (
-    // <div className="login">
-    //   <div className="login-main">
-    //     <h1>Log in</h1>
-    //     <input placeholder="Username" />
-    //     <i></i>
-    //     <input placeholder="Password" />
-    //     <i></i>
-    //     <button>Log in</button>
-    //     <div className="login-sign">
-    //       <p>Don't have an account?</p>
-    //       <p className="login-sign-button" onClick={() => navigate("/sign-up")}>
-    //         Sign Up
-    //       </p>
-    //     </div>
-    //   </div>
-    //   <div></div>
-    // </div>
     <AnimatedPage>
     <div className="login">
       <div class="login-main">
