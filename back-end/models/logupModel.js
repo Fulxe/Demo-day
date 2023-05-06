@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-const userSchema = new Schema({
+const logupSchema = new Schema({
   email: {
     type: String,
     unique: true,
@@ -11,12 +11,12 @@ const userSchema = new Schema({
     unique: true,
     required: [true, "Username is required."],
   },
-  password: {
+  Password: {
     type: Password,
     required: [true, "Password is required."],
   },
 });
 
-const UserModel = model("user", userSchema);
+const LogupUser = model("logup", logupSchema);
 
-export default UserModel;
+export default LogupUser;

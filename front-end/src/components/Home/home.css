@@ -68,7 +68,6 @@
   font-size: 1000%;
   font-weight: 700;
   color: transparent;
-  -webkit-text-stroke: 1px #32cd32;
   background: url(./back.png);
   -webkit-background-clip: text;
   background-position: 0 0;
