@@ -8,7 +8,6 @@ function About() {
       <div className="About">
         <div className="div1">
           <div className="Murun">
-            <div className="picture1"></div>
             <div className="w">
               Muruu
               <br />
@@ -17,29 +16,18 @@ function About() {
           </div>
           <div className="zuras"></div>
           <div className="Tuuguu">
-            <div className="picture2"></div>
             <div className="w">
               Tuuguu
               <br />
-              Tuuguu123@gmail.com
+              tgu.animation@gmail.com
             </div>
           </div>
           <div className="zuras"></div>
           <div className="Bilguun">
-            <div className="picture3"></div>
             <div className="w">
               Bilguun
               <br />
-              Bilguun123@gmail.com
-            </div>
-          </div>
-          <div className="zuras"></div>
-          <div className="Tengis">
-            <div className="picture4"></div>
-            <div className="w">
-              Tengis
-              <br />
-              Tengis123@gmail.com
+              bilguunbek369@gmail.com
             </div>
           </div>
           <div className="zuras"></div>
