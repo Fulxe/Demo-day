@@ -1,7 +1,6 @@
 import "./fruit.css";
 import { CategoryContext } from "../../provider/category";
 import { useContext } from "react";
-import Vegetablepost from "./fruit-vegetable-post/fr-veg-post";
 import Fruitpost from "./fruit-vegetable-post/fr-veg-post";
 
 function Vegetable() {

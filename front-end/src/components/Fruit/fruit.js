@@ -65,33 +65,35 @@ function Fruit() {
     },
   ];
   return (
-    <div className="fr">
-      <div className="fruit">
-        {buttonText === "fruit" ? (
-          <>
-            <input placeholder="Search..." className="fruit-cat-input" />
-            <div className="fruit-child">
-              {titles.map(({ title, goods }) => (
-                <div className="fruit-pt">
-                  <h1 className="fruit-title">{title}</h1>
-                  <div className="fruit-ret">
-                    {goods?.map(({ name, img }) => {
-                      return (
-                        <>
-                          <Fruitpost img={img} name={name} />
-                        </>
-                      );
-                    })}
+    <AnimatedPage>
+      <div className="fr">
+        <div className="fruit">
+          {buttonText === "fruit" ? (
+            <>
+              <input placeholder="Search..." className="fruit-cat-input" />
+              <div className="fruit-child">
+                {titles.map(({ title, goods }) => (
+                  <div className="fruit-pt">
+                    <h1 className="fruit-title">{title}</h1>
+                    <div className="fruit-ret">
+                      {goods?.map(({ name, img }) => {
+                        return (
+                          <>
+                            <Fruitpost img={img} name={name} />
+                          </>
+                        );
+                      })}
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          </>
-        ) : (
-          <Vegetable />
-        )}
+                ))}
+              </div>
+            </>
+          ) : (
+            <Vegetable />
+          )}
+        </div>
       </div>
-    </div>
+    </AnimatedPage>
   );
 }
 
