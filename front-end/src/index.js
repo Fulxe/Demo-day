@@ -11,6 +11,7 @@ import SignUp from "./components/login/sign-up";
 import About from "./components/about/about";
 import CatergoryProvider from "./provider/category";
 import Profile from "./components/Profile/profile";
+import Vegetable from "./components/Fruit/vegetable";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -26,6 +27,13 @@ root.render(
             <Route path="profile" element={<Profile />} />
             <Route path="login" element={<Login />} />
             <Route path="sign-up" element={<SignUp />} />
+            {/* <Route
+            path="/ingredients/:ingredientsType"
+            element={<Ingredients />}
+          /> */}
+
+            <Route path="/food" element={<Food />} />
+            <Route path="/about" element={<About />} />
           </Route>
         </Routes>
       </BrowserRouter>
