@@ -68,13 +68,14 @@
   font-size: 1000%;
   font-weight: 700;
   color: transparent;
-  -webkit-text-stroke: 1px #32cd32;
+  /* -webkit-text-stroke: 1px #32cd32;   */
   background: url(./back.png);
   -webkit-background-clip: text;
   background-position: 0 0;
   animation: back 20s linear infinite;
   margin-left: 105px;
   background-color: #32cd32;
+  text: 1px solid #32cd32;
 }
 @keyframes back {
   100% {
