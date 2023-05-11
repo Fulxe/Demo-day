@@ -1,7 +1,9 @@
 import "./post.css";
 import test from "./fruit2.jpg";
 
+
 function Post() {
+
   return (
     <div className="post">
       <div className="pro">

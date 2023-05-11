@@ -2,7 +2,7 @@ import {Schema , model} from "mongoose"
 
 const postSchema = new Schema ({
     Username: String,
-    Category: "Mongolia" | "Vegan" | "Korean" | "China" | "Italy" | "Japan" | "Indian",
+    Category:{ type: String, enum: [ "Mongolia" , "Vegan" , "Korean" , "China" , "Italy" , "Japan" , "Indian"] },
     FoodName: String,
     Image:String,
     Recipe:String,

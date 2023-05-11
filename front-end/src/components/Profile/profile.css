@@ -1,35 +1,91 @@
-.Profile {  
-    width: 100vw;
-    min-height: 70vh;
+.Profile {
+  width: 100vw;
+  min-height: 70vh;
 }
 .Profile div {
-    border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .profile {
-    width: 100vw;
-    height: fit-content;
-    display: flex;
-    justify-content: space-around;
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  justify-content: space-around;
 }
 .profile-info {
-    width: 20%;
-    min-height: 70vh;
+  width: 20%;
+  min-height: 70vh;
+  margin-top: 50px;
+}
+.pro-image {
+  width: 100%;
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid grey;
+  border-radius: 50px;
+}
+.pro-image img {
+  width: 40%;
+  height: 65%;
+  border-radius: 15%;
+  border: 1px solid grey;
+}
+.pro-image button {
+  padding: 13px 23px;
+  border-radius: 25px;
+  background-color: #32cd32;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+.pro-image button:hover {
+  border: 1px solid #32cd32;
+  background-color: white;
+  color: #32cd32;
+  transition: 700ms;
+}
+.pro-info {
+  width: 100%;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  border: 1px solid grey;
+  border-radius: 50px;
+  margin-top: 50px;
+}
+.pro-info div {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50px;
+  border: 1px solid grey;
+  border-radius: 50px;
+}
+.pro-info input {
+  width: 60%;
+  border: none;
+  background: transparent;
+  color: black;
 }
 .profile-posts {
-    width: 65%;
-    height: fit-content;    
-     min-height: 70vh;
-    display:flex;
-    justify-content: flex-start;
-    align-items:center;
-    flex-wrap:wrap;
-    gap: 2%;
-    position: relative;
+  width: 65%;
+  height: fit-content;
+  min-height: 70vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2%;
+  position: relative;
 }
 .p {
-    z-index: -10;
-    position: absolute;
-    left: 1.8em;
-    top: 2.8em;
-    color: grey;
+  z-index: -10;
+  position: absolute;
+  left: 1.8em;
+  top: 2.8em;
+  color: grey;
 }
