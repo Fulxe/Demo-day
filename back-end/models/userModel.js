@@ -15,6 +15,7 @@ const userSchema = new Schema({
     type: Password,
     required: [true, "Password is required."],
   },
+  Save: [String],
 });
 
 const UserModel = model("user", userSchema);
