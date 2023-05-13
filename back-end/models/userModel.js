@@ -12,7 +12,7 @@ const userSchema = new Schema({
     required: [true, "Username is required."],
   },
   password: {
-    type: Password,
+    type: String,
     required: [true, "Password is required."],
   },
   Save: [String],
@@ -20,4 +20,4 @@ const userSchema = new Schema({
 
 const UserModel = model("user", userSchema);
 
-export default UserModel;
+export { UserModel};
