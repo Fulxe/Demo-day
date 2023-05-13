@@ -1,5 +1,5 @@
 import express from "express";
-import { connect } from "./db.js";
+import { connect } from "./database/db.js";
 import bodyParser from "body-parser";
 import { router } from "./router.js";
 const port = 8000;
