@@ -1,8 +1,10 @@
 .signup {
+  display: flex;
   height: 93vh;
-  position: absolute;
-  top: 100%;
-  left: 37%;
+  justify-content: center;
+  align-items: center;
+  font-size: 1vw;
+  position: relative;
   font-size: 1vw;
 }
 .signup-main {
@@ -102,4 +104,58 @@
   font-weight: 500;
   font-size: 1vw;
   cursor: pointer;
+}
+.bubble1 {
+  position: absolute;
+  left: 5%;
+  bottom: 0%;
+  width: 500px;
+  height: 500px;
+  border-radius: 100%;
+  background-color: #32cd32;
+  animation: bounce 2500ms linear infinite;
+  z-index: -20;
+  box-shadow: 5px 5px 5px grey;
+}
+@keyframes bounce {
+  50% {
+    bottom: 2%;
+    left: 4%;
+  }
+}
+.bubble2 {
+  position: absolute;
+  right: 5%;
+  top: 0%;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  background-color: #32cd32;
+  animation: bounce2 2000ms linear infinite;
+  z-index: -20;
+  box-shadow: 5px 5px 5px grey;
+}
+@keyframes bounce2 {
+  50% {
+    top: 2%;
+    right: 4%;
+  }
+}
+.bubble3 {
+  position: absolute;
+  left: 30%;
+  top: 10%;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: #32cd32;
+  animation: bounce3 2000ms linear infinite;
+  z-index: -20;
+  box-shadow: 5px 5px 5px grey;
+}
+@keyframes bounce3 {
+  50% {
+    top: 11%;
+    left: 31%;
+  }
 }

@@ -1,5 +1,6 @@
 import "./post.css";
 import test from "./fruit2.jpg";
+import Pro from "./pro-test.jpeg"
 
 
 function Post() {
@@ -8,6 +9,7 @@ function Post() {
     <div className="post">
       <div className="pro">
         <div>
+          <img src={Pro} alt=""/>
           {/* username  */}
           <h3>username</h3>
         </div>
