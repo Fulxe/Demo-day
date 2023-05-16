@@ -15,9 +15,16 @@ const userSchema = new Schema({
     type: String,
     required: [true, "Password is required."],
   },
-  Save: [String],
+  postCount: {
+    type: String,
+    required: false,
+  },
+  SavedPost: {
+    type: [String],
+    required: false,
+  },
 });
 
 const UserModel = model("user", userSchema);
 
-export { UserModel};
+export { UserModel };

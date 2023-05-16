@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import "./sign-up.css";
 import { useNavigate } from "react-router";
 import AnimatedPage from "../AnimatedPage";
+import axios from "axios";
 
 function SignUp() {
   const navigate = useNavigate();
+  const [form, setForm] = useState({ password: "", email: "", username: "" });
+  const signUp = async () => {
+    try {
+      const user = await axios.post("http://localhost:8000/create", {
+        username: form.username,
+        email: form.email,
+        password: form.password,
+      });
+      setForm({ password: "", email: "", username: "" });
+      console.log(user);
+      // localStorage.setItem("", user.data.data._id);
+      if (user) {
+        navigate("/");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <AnimatedPage>
       <div className="signup">
@@ -15,21 +35,43 @@ function SignUp() {
           <form autocomplete="off" className="signup-form">
             <h1>Sign Up</h1>
             <div class="signup-input">
-              <input type="firstName" required="required" />
+              <input
+                required="required"
+                onChange={(e) => {
+                  setForm({ ...form, email: e.target.value });
+                }}
+              />
               <span>E-mail</span>
               <i></i>
             </div>
             <div class="signup-input">
-              <input type="firstName" required="required" />
+              <input
+                required="required"
+                onChange={(e) => {
+                  setForm({ ...form, username: e.target.value });
+                }}
+              />
               <span>Username</span>
               <i></i>
             </div>
             <div class="signup-input">
-              <input type="lastName" required="required" />
-              <span>Password</span>
+              <input
+                type="password"
+                required="required"
+                onChange={(e) => {
+                  setForm({ ...form, password: e.target.value });
+                }}
+              />
+              <span type="password">Password</span>
               <i></i>
             </div>
-            <button className="signup-main-button">Sign Up</button>
+            <button
+              type="button"
+              className="signup-main-button"
+              onClick={() => signUp()}
+            >
+              Sign Up
+            </button>
             <div className="sign-sign">
               <p>Already have an account?</p>
               <p

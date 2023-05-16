@@ -5,9 +5,17 @@ import { useContext } from "react";
 import AnimatedPage from "../AnimatedPage";
 import Vegetable from "./vegetable";
 import Fruitpost from "./fruit-vegetable-post/fr-veg-post";
+import axios from "axios";
 
 function Fruit() {
   const { buttonText } = useContext(CategoryContext);
+  const fruitInfo = async () => {
+    try {
+      const fruit = await axios.get("http://localhost:8000/fruit", {});
+    } catch (err) {
+      throw err;
+    }
+  };
   const titles = [
     {
       title: "apple",
