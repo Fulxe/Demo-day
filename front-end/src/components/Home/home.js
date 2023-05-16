@@ -1,5 +1,5 @@
 import "./home.css";
-import React from "react";
+import {React , useEffect , useState} from "react";
 import nxtfood1 from "./image/nxt-food.jpg";
 import nxtfruit1 from "./image/nxt-fruit.jpg";
 import Footer from "../Footer/footer";
@@ -9,9 +9,23 @@ import fruit1 from "./image/fruit.jpg";
 import food2 from "./image/food2.jpg";
 import fruit2 from "./image/fruit2.jpg";
 import AnimatedPage from "../AnimatedPage";
+import axios from "axios"
 
 function Home() {
   const navigate = useNavigate();
+  const [data , setData] = useState([]);
+ 
+  const baseurl = "http://localhost:3000";
+
+  // const setData = async () => {
+  //   try{
+  //     const res = await axios.get("http://localhost8000", {
+
+  //     })
+  //   }
+  // }
+
+
 
   return (
     <AnimatedPage>

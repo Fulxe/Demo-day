@@ -9,7 +9,7 @@ import {
   createUser,
   loginUser,
   deleteUser,
-  getUser
+  getUser,
 } from "./controllers/userController.js";
 
 router.get("/", (req, res) => {
@@ -25,4 +25,4 @@ router.post("/create-food-post", createFoodPosts);
 router.post("/create", createUser);
 router.get("/login", loginUser);
 router.delete("/:id", deleteUser);
-router.get("/user" , getUser)
+router.get("/:id", getUser);
