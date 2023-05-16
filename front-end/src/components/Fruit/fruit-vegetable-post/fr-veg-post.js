@@ -2,7 +2,6 @@ import "./fr-veg-post.css";
 import { useState } from "react";
 
 function Fruitpost(props) {
-  const { img, name } = props;
   const [show, setShow] = useState(false);
 
   return (
