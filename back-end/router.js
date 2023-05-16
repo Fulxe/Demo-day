@@ -4,12 +4,16 @@ import {
   getIngreadients,
   createIngreadients,
 } from "./controllers/fruitController.js";
-import { getFoodPosts, createFoodPosts } from "./controllers/foodController.js";
+import {
+  getFoodPosts,
+  createFoodPosts,
+  deleteFoodPost,
+} from "./controllers/foodController.js";
 import {
   createUser,
   loginUser,
   deleteUser,
-  getUser
+  getUser,
 } from "./controllers/userController.js";
 
 router.get("/", (req, res) => {
@@ -23,6 +27,8 @@ router.post("/fruit", createIngreadients);
 router.get("/food-posts", getFoodPosts);
 router.post("/create-food-post", createFoodPosts);
 router.post("/create", createUser);
-router.get("/login", loginUser);
+router.post("/login", loginUser);
+
 router.delete("/:id", deleteUser);
-router.get("/user" , getUser)
+router.get("/user", getUser);
+router.delete("/delete-food-post/:id", deleteFoodPost);

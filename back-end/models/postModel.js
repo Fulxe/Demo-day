@@ -6,7 +6,9 @@ const postSchema = new Schema({
     type: String,
     enum: ["Mongolia", "Vegan", "Korean", "China", "Italy", "Japan", "Indian"],
   },
-  FoodName: String,
+  FoodName: {
+    type: String,
+  },
   Image: String,
   Recipe: String,
   Ingredients: String,

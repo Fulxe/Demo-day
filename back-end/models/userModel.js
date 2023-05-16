@@ -6,7 +6,7 @@ const userSchema = new Schema({
     unique: true,
     required: [true, "Email is required."],
   },
-  userName: {
+  username: {
     type: String,
     unique: true,
     required: [true, "Username is required."],
@@ -15,9 +15,16 @@ const userSchema = new Schema({
     type: String,
     required: [true, "Password is required."],
   },
-  Save: [String],
+  postCount: {
+    type: String,
+    required: false,
+  },
+  SavedPost: {
+    type: [String],
+    required: false,
+  },
 });
 
 const UserModel = model("user", userSchema);
 
-export { UserModel};
+export { UserModel };

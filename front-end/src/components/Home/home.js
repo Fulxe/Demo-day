@@ -16,9 +16,9 @@ function Home() {
   return (
     <AnimatedPage>
       <div className="Home">
-       <div className="dec3">
-        <div className="dec3-dec"></div>
-       </div>
+        <div className="dec3">
+          <div className="dec3-dec"></div>
+        </div>
         <div className="home">
           <div>
             <p>Welcome To</p>
