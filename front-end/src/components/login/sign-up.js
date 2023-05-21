@@ -34,7 +34,7 @@ function SignUp() {
         <div class="signup-main">
           <form autocomplete="off" className="signup-form">
             <h1>Sign Up</h1>
-            <div class="signup-input">
+            <div className="signup-input">
               <input
                 required="required"
                 onChange={(e) => {
@@ -44,7 +44,7 @@ function SignUp() {
               <span>E-mail</span>
               <i></i>
             </div>
-            <div class="signup-input">
+            <div className="signup-input">
               <input
                 required="required"
                 onChange={(e) => {
@@ -54,7 +54,7 @@ function SignUp() {
               <span>Username</span>
               <i></i>
             </div>
-            <div class="signup-input">
+            <div className="signup-input">
               <input
                 type="password"
                 required="required"

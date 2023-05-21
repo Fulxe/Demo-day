@@ -1,4 +1,5 @@
 import "./food.css";
+import "../login/sign-up.css"
 import Footer from "../Footer/footer";
 import AnimatedPage from "../AnimatedPage";
 import Cate from "../category/category";
@@ -28,6 +29,21 @@ function Food() {
           <div className="add-post">
             <div className="add">
               <button onClick={() => setPost(!post)}>Cancel</button>
+              <div className="post-input">
+                <input/>
+                <span>Food Name</span>
+                <i></i>
+              </div>
+              <div className="post-input">
+                <input/>
+                <span>Food Name</span>
+                <i></i>
+              </div>
+              <div className="post-input">
+                <input/>
+                <span>Food Name</span>
+                <i></i>
+              </div>
             </div>
           </div>
         )}
