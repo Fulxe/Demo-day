@@ -65,9 +65,8 @@
   border: 1px solid grey;
   border-radius: 50px;
 }
-.pro-info input {
-  width: 60%;
-  border: none;
+.pro-info p {
+  width: 50%;
   background: transparent;
   color: black;
 }

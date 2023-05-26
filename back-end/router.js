@@ -14,6 +14,7 @@ import {
   loginUser,
   deleteUser,
   getUser,
+  getUsers,
 } from "./controllers/userController.js";
 
 router.get("/", (req, res) => {
@@ -22,13 +23,19 @@ router.get("/", (req, res) => {
     .status("404")
     .json({ message: "not working, check your internet connection" });
 });
+
+// Fruit
 router.get("/fruit", getIngreadients);
 router.post("/fruit", createIngreadients);
+
+// Food
 router.get("/food-posts", getFoodPosts);
 router.post("/create-food-post", createFoodPosts);
+router.delete("/delete-food-post/:id", deleteFoodPost);
+
+// user
 router.post("/create", createUser);
 router.post("/login", loginUser);
-
 router.delete("/:id", deleteUser);
 router.get("/user", getUser);
-router.delete("/delete-food-post/:id", deleteFoodPost);
+router.get("/users" , getUsers)

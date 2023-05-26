@@ -6,13 +6,10 @@
   height: 90vh;
   position: relative;
 }
-.w {
-  font-size: 25px;
-}
 .div1 {
   height: fit-content;
   -webkit-box-reflect: below 1px
-    linear-gradient(transparent, transparent, #0004);
+    linear-gradient(transparent, transparent, #0004); 
 }
 .w {
   font-size: 25px;

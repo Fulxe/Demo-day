@@ -15,7 +15,7 @@ function Login() {
       });
       setForm({ password: "", email: "" });
       console.log(user);
-      // localStorage.setItem("", user.data.data._id);
+      localStorage.setItem("id", user.data.id);
       if (user) {
         navigate("/");
       }
