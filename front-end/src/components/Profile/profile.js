@@ -4,8 +4,6 @@ import Footer from "../Footer/footer";
 import Post from "../Food/post/post";
 import Protest from "./pro-test.jpeg";
 import { useEffect, useState } from "react";
-import { storage } from "./firebase.config";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import Avatar from "@mui/material/Avatar";
 import axios from "axios";
 
@@ -34,30 +32,6 @@ function Profile() {
     getUser();
   }, []);
 
-  // image add
-  const handleImageChange = (e) => {
-    if (e.target.files[0]) {
-      setImage(e.target.files[0]);
-    }
-  };
-
-  const handleSubmit = () => {
-    const imageRef = ref(storage, "image");
-    uploadBytes(imageRef, image)
-      .then(() => {
-        getDownloadURL(imageRef)
-          .then((url) => {
-            setUrl(url);
-          })
-          .catch((error) => {
-            console.log(error.message, "error getting the image url");
-          });
-        setImage(null);
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
-  };
   return (
     <AnimatedPage>
       <div className="Profile">
@@ -69,9 +43,8 @@ function Profile() {
                 alt=""
                 type="file"
                 src={Protest}
-                onChange={handleImageChange}
               />
-              <button onClick={handleSubmit}>Change</button>
+              <button>Change</button>
             </div>
             <div className="pro-info">
               <div>
@@ -86,7 +59,7 @@ function Profile() {
                 <p>Saved posts:</p>
                 <p>{user?.SavedPost?.length}</p>
               </div>
-              <button onClick={logout}>Logout</button>
+              <button>Logout</button>
             </div>
           </div>
           <div className="profile-posts">
