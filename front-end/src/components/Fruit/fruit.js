@@ -23,70 +23,7 @@ function Fruit() {
   useEffect(() => {
     fruitInfo();
   }, []);
-  // const titles = [
-  //   {
-  //     title: "apple",
-  //     goods: [
-  //       {
-  //         name: "apple",
-  //         img: "https://thumbs.dreamstime.com/b/ripe-red-apple-fruit-apple-half-green-leaf-isolated-white-background-apples-leaf-clipping-path-red-apple-121347277.jpg",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: "apple",
-  //     goods: [
-  //       {
-  //         name: "apple",
-  //         img: "https://thumbs.dreamstime.com/b/ripe-red-apple-fruit-apple-half-green-leaf-isolated-white-background-apples-leaf-clipping-path-red-apple-121347277.jpg",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: "banana",
-  //     goods: [
-  //       {
-  //         name: "apple",
-  //         img: "https://thumbs.dreamstime.com/b/ripe-red-apple-fruit-apple-half-green-leaf-isolated-white-background-apples-leaf-clipping-path-red-apple-121347277.jpg",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: "apple",
-  //     goods: [
-  //       {
-  //         name: "apple",
-  //         img: "https://thumbs.dreamstime.com/b/ripe-red-apple-fruit-apple-half-green-leaf-isolated-white-background-apples-leaf-clipping-path-red-apple-121347277.jpg",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: "apple",
-  //     goods: [
-  //       {
-  //         name: "apple",
-  //         img: "https://thumbs.dreamstime.com/b/ripe-red-apple-fruit-apple-half-green-leaf-isolated-white-background-apples-leaf-clipping-path-red-apple-121347277.jpg",
-  //       },
-  //       {
-  //         name: "apple",
-  //         img: "https://thumbs.dreamstime.com/b/ripe-red-apple-fruit-apple-half-green-leaf-isolated-white-background-apples-leaf-clipping-path-red-apple-121347277.jpg",
-  //       },
-  //       {
-  //         name: "apple",
-  //         img: "https://thumbs.dreamstime.com/b/ripe-red-apple-fruit-apple-half-green-leaf-isolated-white-background-apples-leaf-clipping-path-red-apple-121347277.jpg",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: "banana",
-  //     goods: [
-  //       {
-  //         name: "apple",
-  //         img: "https://thumbs.dreamstime.com/b/ripe-red-apple-fruit-apple-half-green-leaf-isolated-white-background-apples-leaf-clipping-path-red-apple-121347277.jpg",
-  //       },
-  //     ],
-  //   },
-  // ];
+
   return (
     <AnimatedPage>
       <div className="fr">
@@ -100,7 +37,11 @@ function Fruit() {
                     <h1 className="fruit-title">{name}</h1>
 
                     <div className="fruit-ret">
-                      <Fruitpost img={image} />
+                      <Fruitpost
+                        img={image}
+                        description={description}
+                        name={name}
+                      />
                       {/* {goods?.map(({ name, img }) => {
                         return (
                           <>
