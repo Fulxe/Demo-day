@@ -31,12 +31,12 @@ function Profile() {
           </div>
           <div className="profile-posts">
             <p className="p">Post alga</p>
-            {/* <Post />
             <Post />
             <Post />
             <Post />
             <Post />
-            <Post /> */}
+            <Post />
+            <Post />
           </div>
         </div>
       </div>
