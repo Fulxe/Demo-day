@@ -13,11 +13,10 @@ export const createUser = async (req, res, _props) => {
 };
 export const loginUser = async (req, res) => {
   const { email, password } = req.body;
-  // console.log(email, password);
+  console.log(email, password);
   const user = await UserModel.findOne({
     $or: [{ username: email }, { email: email }],
   });
-  
   if (!user) {
     res.status(400).json({ message: "No user found" });
     return;
@@ -40,11 +39,12 @@ export const deleteUser = async (req, res) => {
 };
 
 export const getUser = async (req, res) => {
-  const { id } = req.query;
+  const { id } = req.body;
   try {
     const user = await UserModel.findById(id);
     res.status(200).json({ message: true, data: user });
   } catch (error) {
+    console.log(error)
     return res.status(400).json({ message: true, data: null });
   }
 };
@@ -55,6 +55,7 @@ export const getUsers = async (req, res) => {
       message: true,
       data: user,
     });
+    console.log({data})
   } catch (error) {
     return res.status(400).json({ message: true, data: null });
   }

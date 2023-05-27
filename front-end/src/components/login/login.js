@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./login.css";
 import { useNavigate } from "react-router";
 import AnimatedPage from "../AnimatedPage";
@@ -18,6 +18,7 @@ function Login() {
       localStorage.setItem("id", user.data.id);
       if (user) {
         navigate("/");
+        console.log(user)
       }
     } catch (err) {
       console.log(err);
@@ -56,7 +57,7 @@ function Login() {
               <i></i>
             </div>
             <button
-              type="button"
+              type="submit"
               className="login-main-button"
               onClick={() => logIn()}
             >

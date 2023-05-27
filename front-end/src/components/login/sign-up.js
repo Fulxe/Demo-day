@@ -6,18 +6,17 @@ import axios from "axios";
 
 function SignUp() {
   const navigate = useNavigate();
-  const [form, setForm] = useState({ password: "", email: "", username: "", image:"" });
+  const [form, setForm] = useState({ password: "", email: "", username: ""});
   const signUp = async () => {
     try {
       const user = await axios.post("http://localhost:8000/create", {
         username: form.username,
         email: form.email,
         password: form.password,
-        image:form.image
       });
       setForm({ password: "", email: "", username: "" });
       console.log(user);
-      // localStorage.setItem("", user.data.data._id);
+      localStorage.setItem("id", user.data.id);
       if (user) {
         navigate("/");
       }
