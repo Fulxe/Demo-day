@@ -73,7 +73,7 @@ function Profile() {
             </div>
           </div>
           <div className="profile-posts">
-            <p className="p">Post alga</p>
+            <p className="p">You have not created any posts yet.</p>
             {posts.map((cur) => (
               <Post {...cur} />
             ))}

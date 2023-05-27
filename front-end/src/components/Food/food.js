@@ -2,7 +2,6 @@ import "./food.css";
 import "../login/sign-up.css";
 import Footer from "../Footer/footer";
 import AnimatedPage from "../AnimatedPage";
-import Cate from "../category/category";
 import React, { useEffect, useRef, useState } from "react";
 import Post from "./post/post";
 import axios from "axios";
@@ -35,9 +34,6 @@ function Food() {
     <AnimatedPage>
       <div className="Food">
         <div className="food">
-          <div className="food-line1">
-            <Cate />
-          </div>
           <div className="food-line2">
             {posts?.map((cur) => (
               <Post key={cur._id} {...cur} />

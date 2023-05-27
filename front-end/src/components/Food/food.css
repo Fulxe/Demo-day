@@ -4,11 +4,12 @@
   /* border: 1px solid red; */
 }
 .food {
-  width: 100vw;
+  width: 100%;
   height: fit-content;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   position: relative;
+  margin-left: 13vh;
 }
 .food-line1 {
   width: 13%;
@@ -30,13 +31,7 @@
   height: 100%;
   margin-top: 3%;
 }
-.food-category {
-  width: 100%;
-  height: 5%;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-}
+
 .post-add {
   position: fixed;
   top: 220px;
@@ -137,26 +132,4 @@
   margin: 5px;
   height: fit-content;
   font-style: normal;
-}
-.post-cate {
-  position: absolute;
-  width: 20%;
-  right: 3%;
-  top: 14%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50px;
-  background-color: #32cd32;
-  color: white;
-  cursor: pointer;
-}
-.post-cate p {
-  padding: 10px 10px;
-}
-.add-category {
-  width: 200px;
-  height: fit-content;
-  border: 1px solid red;
 }
