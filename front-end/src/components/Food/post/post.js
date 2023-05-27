@@ -1,9 +1,8 @@
 import "./post.css";
-import test from "./fruit2.jpg";
 import Pro from "./pro-test.jpeg";
 
 function Post(props) {
-  const { FoodName, Image, Recipe, Ingredients } = props;
+  const { FoodName, Image, Recipe, Ingredients, creator } = props;
 
   return (
     <div className="post">
@@ -11,7 +10,7 @@ function Post(props) {
         <div>
           <img src={Pro} alt="" />
           {/* username  */}
-          <h3></h3>
+          <h3>{creator?.username}</h3>
         </div>
         {/*catogories  */}
         {/* <p>Mongolian</p> */}

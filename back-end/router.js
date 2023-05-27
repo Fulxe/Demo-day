@@ -7,6 +7,7 @@ import {
 import {
   getFoodPosts,
   createFoodPosts,
+  getFoodpostByCreator,
   deleteFoodPost,
 } from "./controllers/foodController.js";
 import {
@@ -30,12 +31,13 @@ router.post("/fruit", createIngreadients);
 
 // Food
 router.get("/food-posts", getFoodPosts);
+router.get("/foods-by-creator/:creatorId", getFoodpostByCreator);
 router.post("/create-food-post", createFoodPosts);
 router.delete("/delete-food-post/:id", deleteFoodPost);
 
 // user
 router.get("/user/:id", getUser);
-router.get("/users" , getUsers)
+router.get("/users", getUsers);
 router.post("/create", createUser);
 router.post("/login", loginUser);
 router.delete("/user/:id", deleteUser);

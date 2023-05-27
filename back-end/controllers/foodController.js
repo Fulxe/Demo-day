@@ -1,7 +1,7 @@
 import { foodPost } from "../models/postModel.js";
 
 export const getFoodPosts = async (req, res) => {
-  const body = await foodPost.find();
+  const body = await foodPost.find().populate("creator");
 
   res.status(200).json({ message: true, post: body });
 };
@@ -9,7 +9,20 @@ export const getFoodPosts = async (req, res) => {
 export const getFoodpost = async (req, res) => {
   const { id } = req.params;
   try {
-    const post = await foodPost.findById(id);
+    const post = await foodPost.findById(id).populate("creator");
+    res.status(200).json({ message: true, data: post });
+  } catch (error) {
+    return res.status(400).json({ message: true, data: null });
+  }
+};
+
+export const getFoodpostByCreator = async (req, res) => {
+  const { creatorId } = req.params;
+  try {
+    const post = await foodPost
+      .find({ creator: creatorId })
+      .populate("creator");
+
     res.status(200).json({ message: true, data: post });
   } catch (error) {
     return res.status(400).json({ message: true, data: null });

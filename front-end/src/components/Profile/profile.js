@@ -3,13 +3,14 @@ import AnimatedPage from "../AnimatedPage";
 import Footer from "../Footer/footer";
 import Post from "../Food/post/post";
 import Protest from "./pro-test.jpeg";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import axios from "axios";
 import { CategoryContext } from "../../provider/category";
 
 function Profile() {
   const { user, setUser } = useContext(CategoryContext);
+  const [posts, setPosts] = useState([]);
   const navigate = useNavigate();
 
   // User login
@@ -25,12 +26,25 @@ function Profile() {
         console.log(err);
       });
   };
+  const getPosts = async () => {
+    try {
+      const id = localStorage.getItem("id");
+      const { data } = await axios({
+        method: "GET",
+        url: `http://localhost:8000/foods-by-creator/${id}`,
+      });
+
+      setPosts(data.data);
+    } catch (error) {}
+  };
+
   const logout = () => {
     localStorage.removeItem("id");
   };
 
   useEffect(() => {
     getUser();
+    getPosts();
   }, []);
 
   return (
@@ -53,19 +67,16 @@ function Profile() {
               </div>
               <div>
                 <p>Postiin too:</p>
-                <p></p>
+                <p>{posts.length}</p>
               </div>
               <button onClick={() => logout(navigate("/"))}>Logout</button>
             </div>
           </div>
           <div className="profile-posts">
             <p className="p">Post alga</p>
-            <Post />
-            {/* <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post /> */}
+            {posts.map((cur) => (
+              <Post {...cur} />
+            ))}
           </div>
         </div>
       </div>

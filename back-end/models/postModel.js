@@ -14,6 +14,7 @@ const postSchema = new Schema({
   Ingredients: String,
   Save: Boolean,
   SaveCount: Number,
+  creator: { type: Schema.Types.ObjectId, ref: "user" },
 });
 
 const foodPost = model("foodPost", postSchema);

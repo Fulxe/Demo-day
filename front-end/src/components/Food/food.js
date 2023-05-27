@@ -21,7 +21,7 @@ function Food() {
         url: "http://localhost:8000/food-posts",
       });
 
-      setPosts(data);
+      setPosts(data.post);
     } catch (error) {
       alert(error);
     }
@@ -39,7 +39,7 @@ function Food() {
             <Cate />
           </div>
           <div className="food-line2">
-            {posts.map((cur) => (
+            {posts?.map((cur) => (
               <Post key={cur._id} {...cur} />
             ))}
           </div>
@@ -55,7 +55,12 @@ function Food() {
             Post
           </button>
         </div>
-        {showModal && <AddFoodModal onClose={() => setShowModal(!showModal)} />}
+        {showModal && (
+          <AddFoodModal
+            onClose={() => setShowModal(!showModal)}
+            getAllPosts={getAllPosts}
+          />
+        )}
         <Footer />
       </div>
     </AnimatedPage>
@@ -64,7 +69,7 @@ function Food() {
 
 export default Food;
 
-const AddFoodModal = ({ onClose }) => {
+const AddFoodModal = ({ onClose, getAllPosts }) => {
   const [isOpenCategory, setIsOpenCategory] = useState(false);
   const [postValue, setPostValue] = useState({});
   const imageInputRef = useRef();
@@ -81,6 +86,7 @@ const AddFoodModal = ({ onClose }) => {
 
   const addPost = async () => {
     try {
+      const id = localStorage.getItem("id");
       const imageUrl = await uploadFile();
 
       await axios({
@@ -92,10 +98,12 @@ const AddFoodModal = ({ onClose }) => {
           Image: imageUrl,
           Recipe: postValue.recipe,
           Ingredients: postValue.ingredients,
+          creator: id,
         },
       });
 
       setPostValue({});
+      await getAllPosts();
       onClose();
     } catch (err) {
       alert(err);

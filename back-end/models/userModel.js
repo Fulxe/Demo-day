@@ -15,12 +15,7 @@ const userSchema = new Schema({
     type: String,
     required: [true, "Password is required."],
   },
-  postCount: {
-    type: String,
-    required: false,
-  },
-  Image: String,
-});``
+});
 
 const UserModel = model("user", userSchema);
 
