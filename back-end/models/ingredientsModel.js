@@ -9,7 +9,7 @@ const fruitSchema = new Schema({
     type: String,
     required: [true, "Image is required."],
   },
-  category: { type: String, enum: ["fruit", "vegetables"] },
+  category: { type: String, enum: ["fruit", "vegetable"] },
   description: {
     type: String,
     required: [true, "Description is required."],

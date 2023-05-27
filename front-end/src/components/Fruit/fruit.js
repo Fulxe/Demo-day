@@ -10,11 +10,18 @@ import axios from "axios";
 function Fruit() {
   const { buttonText } = useContext(CategoryContext);
   const [titles, setTitles] = useState([]);
+  const [searchItem, setSearch] = useState(titles);
+  const [query, setQuery] = useState("");
+  const names = [];
+  useEffect(() => {
+    setSearch(titles.filter((title) => title.name.includes(query)));
+  }, [query]);
   const fruitInfo = async () => {
     try {
       const fruit = await axios.get("http://localhost:8000/fruit", {});
-      console.log(fruit);
-      setTitles(fruit.data);
+      const value = fruit.data.filter((cur) => cur.category === "fruit");
+      setTitles(value);
+      setSearch(value);
     } catch (err) {
       throw err;
     }
@@ -30,9 +37,16 @@ function Fruit() {
         <div className="fruit">
           {buttonText === "fruit" ? (
             <>
-              <input placeholder="Search..." className="fruit-cat-input" />
+              <input
+                placeholder="Search..."
+                className="fruit-cat-input"
+                onChange={(e) => setQuery(e.target.value)}
+              />
+              {names.map((value) => (
+                <h1 key={value.name}>{value.name}</h1>
+              ))}
               <div className="fruit-child">
-                {titles.map(({ name, image, description }) => (
+                {searchItem.map(({ name, image, description }) => (
                   <div className="fruit-pt">
                     <h1 className="fruit-title">{name}</h1>
 
@@ -42,13 +56,6 @@ function Fruit() {
                         description={description}
                         name={name}
                       />
-                      {/* {goods?.map(({ name, img }) => {
-                        return (
-                          <>
-                            <Fruitpost img={img} name={name} />
-                          </>
-                        );
-                      })} */}
                     </div>
                   </div>
                 ))}

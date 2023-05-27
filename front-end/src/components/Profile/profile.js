@@ -9,17 +9,21 @@ import axios from "axios";
 import { CategoryContext } from "../../provider/category";
 
 function Profile() {
-  const {user, setUser} = useContext(CategoryContext)
+  const { user, setUser } = useContext(CategoryContext);
   const navigate = useNavigate();
 
   // User login
   const getUser = async () => {
     const id = localStorage.getItem("id");
-    await axios.get(`http://localhost:8000/user/${id}`)
-    .then((res) => {
-      setUser(res.data.data)
-    })
-    .then(console.log('===>' , user)).catch((err) => {console.log(err)})
+    await axios
+      .get(`http://localhost:8000/user/${id}`)
+      .then((res) => {
+        setUser(res.data.data);
+      })
+      .then(console.log("===>", user))
+      .catch((err) => {
+        console.log(err);
+      });
   };
   const logout = () => {
     localStorage.removeItem("id");
@@ -28,7 +32,7 @@ function Profile() {
   useEffect(() => {
     getUser();
   }, []);
-  
+
   return (
     <AnimatedPage>
       <div className="Profile">
