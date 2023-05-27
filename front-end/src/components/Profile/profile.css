@@ -53,7 +53,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  border: 1px solid grey;
   border-radius: 50px;
   margin-top: 50px;
 }
@@ -61,7 +60,6 @@
   width: 70%;
   display: flex;
   justify-content: space-between;
-  border: 1px solid grey;
   border-radius: 50px;
 }
 .pro-info p {
@@ -86,4 +84,21 @@
   left: 1.8em;
   top: 2.8em;
   color: grey;
+}
+.food-post-information {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  margin-top: 6vh;
+}
+.profile-logout {
+  background-color: #32cd32;
+  border: none;
+  border-radius: 1vw;
+  color: white;
+  width: 6vw;
+  height: 4vh;
+  font-size: 1vw;
+  padding: 0.5vw;
+  margin-top: 8vh;
 }

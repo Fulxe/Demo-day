@@ -2,7 +2,6 @@ import "./profile.css";
 import AnimatedPage from "../AnimatedPage";
 import Footer from "../Footer/footer";
 import Post from "../Food/post/post";
-import Protest from "./pro-test.jpeg";
 import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import axios from "axios";
@@ -52,24 +51,25 @@ function Profile() {
       <div className="Profile">
         <div className="profile">
           <div className="profile-info">
-            <div className="pro-image">
-              <img alt="" type="file" src={Protest} />
-              <button>Change</button>
-            </div>
             <div className="pro-info">
-              <div>
-                <p>Ner:</p>
+              <div className="food-post-information">
+                <h4>Username:</h4>
                 <p>{user?.username}</p>
               </div>
-              <div>
-                <p>Email:</p>
+              <div className="food-post-information">
+                <h4>Email:</h4>
                 <p>{user?.email}</p>
               </div>
-              <div>
-                <p>Postiin too:</p>
+              <div className="food-post-information">
+                <h4>Post count:</h4>
                 <p>{posts.length}</p>
               </div>
-              <button onClick={() => logout(navigate("/"))}>Logout</button>
+              <button
+                className="profile-logout"
+                onClick={() => logout(navigate("/"))}
+              >
+                Logout
+              </button>
             </div>
           </div>
           <div className="profile-posts">
