@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "./category.css"
+import "./category.css";
 
 function Cate(props) {
   const paths = ["Mongolian", "Vegan", "Healthy", "Korean", "Mexican"];
@@ -9,10 +9,10 @@ function Cate(props) {
 
   return (
     <div className="categ " onClick={() => showDropdown(false)}>
-      <div class="navbar">
-        <div class="dropdown">
+      <div className="navbar">
+        <div className="dropdown">
           <button
-            class="dropbtn"
+            className="dropbtn"
             onClick={(e) => {
               e.stopPropagation();
               showDropdown(!dropdown);
@@ -22,7 +22,7 @@ function Cate(props) {
           </button>
           {dropdown && (
             <div
-              class="dropdown-content"
+              className="dropdown-content"
               onClick={(e) => {
                 e.stopPropagation();
               }}

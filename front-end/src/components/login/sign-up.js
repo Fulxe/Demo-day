@@ -1,4 +1,4 @@
-import React, { useState  } from "react";
+import React, { useState } from "react";
 import "./sign-up.css";
 import { useNavigate } from "react-router";
 import AnimatedPage from "../AnimatedPage";
@@ -6,10 +6,10 @@ import axios from "axios";
 
 function SignUp() {
   const navigate = useNavigate();
-  const [form, setForm] = useState({ password: "", email: "", username: ""});
+  const [form, setForm] = useState({ password: "", email: "", username: "" });
   const signUp = async () => {
     try {
-      const {data:user} = await axios.post("http://localhost:8000/create", {
+      const { data: user } = await axios.post("http://localhost:8000/create", {
         username: form.username,
         email: form.email,
         password: form.password,
@@ -46,7 +46,7 @@ function SignUp() {
             </div>
             <div className="signup-input">
               <input
-              type="firsName"
+                type="firsName"
                 required="required"
                 onChange={(e) => {
                   setForm({ ...form, username: e.target.value });

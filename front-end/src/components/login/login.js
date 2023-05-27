@@ -36,7 +36,7 @@ function Login() {
           <div className="login-form">
             <button onClick={() => navigate("/")}>Back</button>
             <h1>Log in</h1>
-            <div class="login-input">
+            <div className="login-input">
               <input
                 type="firstName"
                 required="required"
@@ -47,7 +47,7 @@ function Login() {
               <span>Username or E-mail</span>
               <i></i>
             </div>
-            <div class="login-input">
+            <div className="login-input">
               <input
                 type="password"
                 required="required"
@@ -58,11 +58,7 @@ function Login() {
               <span>Password</span>
               <i></i>
             </div>
-            <button
-              type="button"
-              className="login-main-button"
-              onClick={logIn}
-            >
+            <button type="button" className="login-main-button" onClick={logIn}>
               Log in
             </button>
             <div className="login-sign">

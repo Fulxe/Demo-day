@@ -64,7 +64,7 @@
   position: fixed;
   top: 0px;
   left: 0px;
-  background-color: transparent ( grey , grey);
+  background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,7 +136,7 @@
 .post-post2 textarea {
   margin: 5px;
   height: fit-content;
-  font-style:normal;
+  font-style: normal;
 }
 .post-cate {
   position: absolute;

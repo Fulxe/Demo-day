@@ -23,7 +23,8 @@ export const createFoodPosts = async (req, res) => {
 export const deleteFoodPost = async (req, res) => {
   const { id } = req.params;
   try {
-    const del = await foodPost.findByIdAndDelete(id);
+    // const del = await foodPost.findByIdAndDelete(id);
+    const del = await foodPost.deleteMany({ Category: "Mongolia" });
     res.status(200).json({ message: `deleted` });
   } catch (err) {
     return res.status(400).json({ message: true, data: null });
