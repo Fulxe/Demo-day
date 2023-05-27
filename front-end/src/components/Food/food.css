@@ -5,11 +5,10 @@
 }
 .food {
   width: 100%;
-  height: fit-content;
+  min-height: 50vh;
   display: flex;
   justify-content: center;
   position: relative;
-  margin-left: 13vh;
 }
 .food-line1 {
   width: 13%;
@@ -77,8 +76,8 @@
   width: 10%;
   height: 40px;
   position: absolute;
-  right: 30px;
-  top: 30px;
+  right: 3%;
+  top: 5%;
   cursor: pointer;
   background-color: #32cd32;
   border: none;
@@ -89,8 +88,8 @@
   width: 10%;
   height: 40px;
   position: absolute;
-  right: 110px;
-  top: 30px;
+  right: 14%;
+  top: 5%;
   cursor: pointer;
   background-color: #32cd32;
   border: none;

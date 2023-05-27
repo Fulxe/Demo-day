@@ -25,7 +25,7 @@ function Home() {
         </div>
         <div className="home">
           <div>
-            <p>Welcome To</p>
+            <h1>Welcome To</h1>
             <h1>Pineapple</h1>
           </div>
           <div className="images">

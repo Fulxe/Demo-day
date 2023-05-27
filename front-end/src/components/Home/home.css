@@ -53,8 +53,8 @@
   border-bottom-left-radius: 100%;
 }
 .home div:nth-child(1) {
-  width: 40%;
-  height: 40%;
+  min-width: 40%;
+  height: fit-content;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -65,7 +65,7 @@
   color: #32cd32;
 }
 .home h1 {
-  font-size: 1000%;
+  font-size: 700%;
   font-weight: 700;
   color: transparent;
   background: url(./back.png);

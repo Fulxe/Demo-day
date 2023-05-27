@@ -8,7 +8,6 @@ function Post(props) {
     <div className="post">
       <div className="pro">
         <div>
-          <img src={Pro} alt="" />
           {/* username  */}
           <h3>{creator?.username}</h3>
         </div>
