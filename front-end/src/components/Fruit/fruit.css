@@ -31,11 +31,13 @@
     width: 15vw;
     flex-direction: column;
     background-color: rgb(244, 247, 244);
+    border-radius: 50px;
 }
 .fruit-ret {
     display: flex;
     flex-direction: "row";
     gap: 10px;
+    border-radius: 50px;
 }
 .fruit-child {
     display: grid;

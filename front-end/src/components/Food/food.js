@@ -114,14 +114,6 @@ const AddFoodModal = ({ onClose, getAllPosts }) => {
     <div className="add-post">
       <div className="add">
         <button onClick={onClose}>Cancel</button>
-        <div className="post-cate" onClick={() => setIsOpenCategory(true)}>
-          <p>Category</p>
-          {isOpenCategory && (
-            <div className="add-category">
-              <Cate />
-            </div>
-          )}
-        </div>
         <button onClick={() => addPost()}>Post</button>
         <div className="post-post">
           <input
