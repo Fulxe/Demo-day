@@ -2,10 +2,9 @@ import { UserModel } from "../models/userModel.js";
 
 export const createUser = async (req, res, _props) => {
   try {
-    console.log(req.body);
-
     const createUser = await UserModel.create(req.body);
     res.status(201).json({ message: ` New user is created`, data: createUser });
+    console.log(createUser);
   } catch (err) {
     console.log(err);
     res.status(400).json({ message: "invalid input" });
@@ -18,11 +17,12 @@ export const loginUser = async (req, res) => {
     $or: [{ username: email }, { email: email }],
   });
   if (!user) {
-    res.status(400).json({ message: "No user found" });
-    return;
+    return res.status(400).json({ message: "No user found" });
   }
   if (user.password === password)
-    res.status(200).json({ message: true, data: user.username, id: user.id });
+    return res
+      .status(200)
+      .json({ message: true, data: user.username, id: user.id });
 };
 export const deleteUser = async (req, res) => {
   const { id } = req.params;
@@ -39,12 +39,15 @@ export const deleteUser = async (req, res) => {
 };
 
 export const getUser = async (req, res) => {
-  const { id } = req.body;
+  const { id } = req.params;
+  // console.log(id)
   try {
+    // console.log(id, "hi");
     const user = await UserModel.findById(id);
     res.status(200).json({ message: true, data: user });
+    // console.log(user);
   } catch (error) {
-    console.log(error)
+    console.log(error);
     return res.status(400).json({ message: true, data: null });
   }
 };
@@ -55,7 +58,7 @@ export const getUsers = async (req, res) => {
       message: true,
       data: user,
     });
-    console.log({data})
+    console.log(user);
   } catch (error) {
     return res.status(400).json({ message: true, data: null });
   }

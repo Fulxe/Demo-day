@@ -1,15 +1,33 @@
 import "./post.css";
 import test from "./fruit2.jpg";
 import Pro from "./pro-test.jpeg";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
-function Post() {
+function Post(props) {
+  // const [foodName , recipe  ] = props
+  // const [post, setPost] = useState({});
+
+  // const getPost = async () => {
+
+  //   const id = localStorage.getItem("id")
+  //   console.log(id)
+  //   const post = await axios.get(`http://localhost:8000/food-posts/${id}`);
+  //   setPost(post);
+  //   console.log(post);
+  // };
+
+  // useEffect(() => {
+  //   getPost();
+  // });
+
   return (
     <div className="post">
       <div className="pro">
         <div>
           <img src={Pro} alt="" />
           {/* username  */}
-          <h3>username</h3>
+          <h3></h3>
         </div>
         {/*catogories  */}
         <p>Mongolian</p>

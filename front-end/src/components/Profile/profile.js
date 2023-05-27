@@ -3,25 +3,23 @@ import AnimatedPage from "../AnimatedPage";
 import Footer from "../Footer/footer";
 import Post from "../Food/post/post";
 import Protest from "./pro-test.jpeg";
-import { useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
+import { useNavigate } from "react-router";
 import axios from "axios";
+import { CategoryContext } from "../../provider/category";
 
 function Profile() {
-  const [user, setUser] = useState({});
+  const {user, setUser} = useContext(CategoryContext)
+  const navigate = useNavigate();
 
   // User login
   const getUser = async () => {
-    const id = localStorage.getItem("uid");
-    console.log(id)
-
-    // if(!id) alert('login')
-
-    // const { data } = await axios.get(`http://localhost:1000/${id}`);
-    const { data } = await axios.get(`http://localhost:8000/user`, {
-      body: { id },
-    });
-    setUser(data.data);
-    console.log(data);
+    const id = localStorage.getItem("id");
+    await axios.get(`http://localhost:8000/user/${id}`)
+    .then((res) => {
+      setUser(res.data.data)
+    })
+    .then(console.log('===>' , user)).catch((err) => {console.log(err)})
   };
   const logout = () => {
     localStorage.removeItem("id");
@@ -30,7 +28,7 @@ function Profile() {
   useEffect(() => {
     getUser();
   }, []);
-
+  
   return (
     <AnimatedPage>
       <div className="Profile">
@@ -46,24 +44,24 @@ function Profile() {
                 <p>{user?.username}</p>
               </div>
               <div>
-                <p>Postiin too:</p>
-                <p></p>
-              </div>
-              <div>
                 <p>Email:</p>
                 <p>{user?.email}</p>
               </div>
-              <button onClick={() => logout()}>Logout</button>
+              <div>
+                <p>Postiin too:</p>
+                <p></p>
+              </div>
+              <button onClick={() => logout(navigate("/"))}>Logout</button>
             </div>
           </div>
           <div className="profile-posts">
             <p className="p">Post alga</p>
             <Post />
+            {/* <Post />
             <Post />
             <Post />
             <Post />
-            <Post />
-            <Post />
+            <Post /> */}
           </div>
         </div>
       </div>

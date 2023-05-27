@@ -3,22 +3,24 @@ import "./login.css";
 import { useNavigate } from "react-router";
 import AnimatedPage from "../AnimatedPage";
 import axios from "axios";
+// import { CategoryContext } from "../../provider/category";
 
 function Login() {
   const navigate = useNavigate();
+  // const {id , setId} = useContext(CategoryContext);
   const [form, setForm] = useState({ password: "", email: "" });
+
   const logIn = async () => {
     try {
       const user = await axios.post("http://localhost:8000/login", {
         email: form.email,
         password: form.password,
       });
+
       setForm({ password: "", email: "" });
-      console.log(user);
-      localStorage.setItem("id", user.data.id);
       if (user) {
+        localStorage.setItem("id", user.data.id);
         navigate("/");
-        console.log(user)
       }
     } catch (err) {
       console.log(err);
@@ -31,7 +33,7 @@ function Login() {
         <div className="bubble2"></div>
         <div className="bubble3"></div>
         <div class="login-main">
-          <form autocomplete="off" className="login-form">
+          <div className="login-form">
             <button onClick={() => navigate("/")}>Back</button>
             <h1>Log in</h1>
             <div class="login-input">
@@ -47,7 +49,7 @@ function Login() {
             </div>
             <div class="login-input">
               <input
-                type="lastName"
+                type="password"
                 required="required"
                 onChange={(e) => {
                   setForm({ ...form, password: e.target.value });
@@ -57,9 +59,9 @@ function Login() {
               <i></i>
             </div>
             <button
-              type="submit"
+              type="button"
               className="login-main-button"
-              onClick={() => logIn()}
+              onClick={logIn}
             >
               Log in
             </button>
@@ -72,7 +74,7 @@ function Login() {
                 Sign Up
               </p>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </AnimatedPage>

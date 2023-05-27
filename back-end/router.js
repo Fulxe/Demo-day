@@ -34,8 +34,8 @@ router.post("/create-food-post", createFoodPosts);
 router.delete("/delete-food-post/:id", deleteFoodPost);
 
 // user
-router.get("/:id", getUser);
+router.get("/user/:id", getUser);
 router.get("/users" , getUsers)
 router.post("/create", createUser);
 router.post("/login", loginUser);
-router.delete("/:id", deleteUser);
+router.delete("/user/:id", deleteUser);

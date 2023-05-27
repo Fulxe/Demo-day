@@ -3,7 +3,17 @@ import { foodPost } from "../models/postModel.js";
 export const getFoodPosts = async (req, res) => {
   const body = await foodPost.find();
 
-  res.status(200).json(body);
+  res.status(200).json({ message: true, post: body });
+};
+
+export const getFoodpost = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const post = await foodPost.findById(id);
+    res.status(200).json({ message: true, data: post });
+  } catch (error) {
+    return res.status(400).json({ message: true, data: null });
+  }
 };
 
 export const createFoodPosts = async (req, res) => {

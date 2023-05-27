@@ -9,15 +9,15 @@ function SignUp() {
   const [form, setForm] = useState({ password: "", email: "", username: ""});
   const signUp = async () => {
     try {
-      const user = await axios.post("http://localhost:8000/create", {
+      const {data:user} = await axios.post("http://localhost:8000/create", {
         username: form.username,
         email: form.email,
         password: form.password,
       });
       setForm({ password: "", email: "", username: "" });
       console.log(user);
-      localStorage.setItem("id", user.data.id);
       if (user) {
+        localStorage.setItem("id", user.data._id);
         navigate("/");
       }
     } catch (err) {
@@ -32,7 +32,7 @@ function SignUp() {
         <div className="bubble2"></div>
         <div className="bubble3"></div>
         <div class="signup-main">
-          <form autocomplete="off" className="signup-form">
+          <div autocomplete="off" className="signup-form">
             <h1>Sign Up</h1>
             <div className="signup-input">
               <input
@@ -46,6 +46,7 @@ function SignUp() {
             </div>
             <div className="signup-input">
               <input
+              type="firsName"
                 required="required"
                 onChange={(e) => {
                   setForm({ ...form, username: e.target.value });
@@ -68,7 +69,7 @@ function SignUp() {
             <button
               type="button"
               className="signup-main-button"
-              onClick={() => signUp()}
+              onClick={() => signUp(navigate("/"))}
             >
               Sign Up
             </button>
@@ -81,7 +82,7 @@ function SignUp() {
                 Log In
               </p>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </AnimatedPage>
