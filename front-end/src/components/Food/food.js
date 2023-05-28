@@ -17,7 +17,7 @@ function Food() {
     try {
       const { data } = await axios({
         method: "GET",
-        url: "https://demo-day-bck.vercel.app/food-posts",
+        url: "https://back-end-muruuuu8-gmailcom.vercel.app//food-posts",
       });
 
       setPosts(data.post);
@@ -87,7 +87,7 @@ const AddFoodModal = ({ onClose, getAllPosts }) => {
 
       await axios({
         method: "POST",
-        url: "https://demo-day-bck.vercel.app/create-food-post",
+        url: "https://back-end-muruuuu8-gmailcom.vercel.app//create-food-post",
         data: {
           Category: "Mongolia",
           FoodName: postValue.foodName,

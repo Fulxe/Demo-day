@@ -9,7 +9,7 @@ function SignUp() {
   const [form, setForm] = useState({ password: "", email: "", username: "" });
   const signUp = async () => {
     try {
-      const { data: user } = await axios.post("https://demo-day-bck.vercel.app/create", {
+      const { data: user } = await axios.post("https://back-end-muruuuu8-gmailcom.vercel.app//create", {
         username: form.username,
         email: form.email,
         password: form.password,
