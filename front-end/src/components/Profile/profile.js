@@ -16,7 +16,7 @@ function Profile() {
   const getUser = async () => {
     const id = localStorage.getItem("id");
     await axios
-      .get(`http://localhost:8000/user/${id}`)
+      .get(`https://demo-day-bck.vercel.app/user/${id}`)
       .then((res) => {
         setUser(res.data.data);
       })
@@ -30,7 +30,7 @@ function Profile() {
       const id = localStorage.getItem("id");
       const { data } = await axios({
         method: "GET",
-        url: `http://localhost:8000/foods-by-creator/${id}`,
+        url: `https://demo-day-bck.vercel.app/foods-by-creator/${id}`,
       });
 
       setPosts(data.data);

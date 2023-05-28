@@ -18,7 +18,7 @@ function Fruit() {
   }, [query]);
   const fruitInfo = async () => {
     try {
-      const fruit = await axios.get("http://localhost:8000/fruit", {});
+      const fruit = await axios.get("https://demo-day-bck.vercel.app/fruit", {});
       const value = fruit.data.filter((cur) => cur.category === "fruit");
       setTitles(value);
       setSearch(value);

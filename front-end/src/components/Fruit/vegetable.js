@@ -86,7 +86,7 @@ function Vegetable() {
 
   const vegetableInfo = async () => {
     try {
-      const vegetable = await axios.get("http://localhost:8000/fruit", {});
+      const vegetable = await axios.get("https://demo-day-bck.vercel.app/fruit", {});
       const value = vegetable.data.filter(
         (cur) => cur.category === "vegetable"
       );

@@ -12,7 +12,7 @@ function Login() {
 
   const logIn = async () => {
     try {
-      const user = await axios.post("http://localhost:8000/login", {
+      const user = await axios.post("https://demo-day-bck.vercel.app/login", {
         email: form.email,
         password: form.password,
       });
