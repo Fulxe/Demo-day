@@ -16,7 +16,7 @@ function Profile() {
   const getUser = async () => {
     const id = localStorage.getItem("id");
     await axios
-      .get(`https://back-end-muruuuu8-gmailcom.vercel.app//user/${id}`)
+      .get(`https://demo-day-bck.vercel.app/user/${id}`)
       .then((res) => {
         setUser(res.data.data);
       })
